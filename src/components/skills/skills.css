@@ -1,0 +1,78 @@
+.skills__container {
+display: grid;
+gap: 15%;
+}
+.skills__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1.5rem;
+}
+.skills__card {
+    background-color: rgb(26, 26, 39);
+    color:var(--color-white) ;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    padding-top: 0.5rem;
+    transition: var(--transition);
+    border: solid;
+    transition: transform .2s;
+}
+.skills__card:hover {
+    background: rgba(0, 0, 0, 0.363);
+    transform: scale(1.2);
+    border: transparent;
+    border-color: rgb(170, 190, 170) ;
+    cursor: default;
+}
+
+.skills__icons
+{
+   margin-left: 50%;
+   
+   color: white; 
+   font-size: 1.4rem ;
+   margin-top: 10px;
+  
+   
+}
+.skills__card h3{
+   
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    color: var(--color-primary);
+
+}
+.skills__card h4{
+    font-size: 1.2rem;
+    color: var(--color-light);
+    
+}
+
+
+/*********** MEDIA QUERIES (Small DEVICES)************/
+@media screen and ( max-width:600px ) {
+   
+   .skills__cards{
+    grid-template-columns: 1fr ;
+    gap: 1rem;
+   }
+}
+
+@media screen and ( max-width:1024px ) {
+
+    .skills__container{
+        gap: 1rem;
+    }
+    .skills__content
+    {
+        margin-top: 5rem;
+    }
+    .skills__cards{
+     grid-template-columns: 1fr;
+     gap: 1rem;
+    }
+ }

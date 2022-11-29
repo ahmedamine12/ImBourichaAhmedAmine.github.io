@@ -1,0 +1,196 @@
+.project__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10%;
+    
+}
+.listProject
+{
+    margin-bottom:10rem ;
+}
+
+.project__me
+{    
+width: 100%;
+
+border-radius: 2rem;
+
+display: grid;
+place-items:center;
+}
+.project__me-image {
+    width: 100%;
+    filter: blur(2);
+    margin-top: 0rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    -webkit-filter: sepia(100%) hue-rotate(90deg) saturate(400%);
+    filter: sepia(100%) hue-rotate(90deg) saturate(400%);
+   
+    
+    transition: transform .6s;
+}
+.project__me-image:hover{
+    filter: none;
+    transform: scale(1.2);
+}
+
+
+
+.project__content p
+{
+border: solid;
+margin: 2rem;
+padding: 2rem;
+border-radius: 3rem;
+color: var(--color-light);
+transition: transform .6s;
+
+}
+
+.project__content h2
+{
+    text-align: center;
+color: white;
+}
+.project__content p:hover
+{
+color: white;
+transform: scale(1.2);
+
+}
+.project__content h2
+{
+    text-align: center;
+    color: var(--color-primary);
+}
+.project__content h5
+{
+   font-size: medium;
+color: var(--color-primary);
+padding-inline: 3rem;
+
+}
+.UlListOtherProject
+{
+    width: 90%;
+    margin-left: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 1.5rem;
+}
+.LiListOtherProject{
+   
+    color:var(--color-white) ;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    padding-top: 0.5rem;
+    transition: var(--transition);
+    border: solid;
+    transition: transform .2s;
+    background-color: rgb(26, 26, 39);
+   
+}
+.LiListOtherProject:hover{
+   
+   transform: scale(1.05);
+   color: white;
+   background: transparent;
+ 
+}
+.LiListOtherProject h2{
+   color: var(--color-primary);
+   text-align: center;
+ 
+ }
+ .LiListOtherProject p{
+    margin: 1rem;
+  
+  }
+  .icone
+  {
+    font-size:xx-large;
+    color: aliceblue;
+
+
+  }
+ .iconegit a
+ {
+    font-size:xx-large;
+    color: aliceblue;
+    float: right;
+    margin-left: 1rem;
+    
+ }
+ 
+ .iconegit:hover
+ {
+    color: var(--color-primary);
+ }
+ .LiListOtherProject h5
+{
+   font-size: medium;
+color: var(--color-primary);
+padding-inline: 3rem;
+
+}
+.LiListOtherProject h5
+{
+   font-size: medium;
+color: var(--color-primary);
+padding-inline: 3rem;
+
+}
+/*********** MEDIA QUERIES (MEDIUM DEVICES)************/
+@media screen and ( max-width:1024px ) {
+    .project__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .project__me{
+        width: 70%;
+        margin: 2rem auto 4rem;
+    }
+    .project__content p {
+        margin: 1rem 0 1.5rem;
+    }
+    .UlListOtherProject
+{
+    width: 90%;
+    margin-left: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.LiListOtherProject
+{
+   width: 80%;
+
+}
+}
+
+
+/*********** MEDIA QUERIES (Small DEVICES)************/
+@media screen and ( max-width:600px ) {
+    .project__me{
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+    .project__content {
+        text-align: center;
+
+    }
+    .project__content p {
+        margin: 1.5rem 0;
+    }
+    .UlListOtherProject
+{
+    width: 70%;
+    margin-left: 4rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+    
+}
