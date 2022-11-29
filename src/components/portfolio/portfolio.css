@@ -174,7 +174,7 @@ padding-inline: 3rem;
 /*********** MEDIA QUERIES (Small DEVICES)************/
 @media screen and ( max-width:600px ) {
     .project__me{
-        width: 65%;
+        width: 80%;
         margin: 0 auto 3rem;
     }
     .project__content {
@@ -187,10 +187,11 @@ padding-inline: 3rem;
     .UlListOtherProject
 {
     width: 70%;
-    margin-left: 4rem;
+    margin-left: 2rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
+    gap:2rem;
+    
 }
     
 }
