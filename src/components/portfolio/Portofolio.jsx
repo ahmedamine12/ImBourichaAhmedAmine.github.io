@@ -14,11 +14,7 @@ const Portofolio = () => {
       <ul>
         <li className='listProject'>
           <div className='container project__container'>
-            <div className='project__me'>
-              <div className='project__me-image'>
-                <img src={ProjetResto} alt="project Image" />
-              </div>
-            </div>
+
             <div className='project__content'>
 
               <h2>Generation of dynamic restaurant websites </h2>
@@ -30,10 +26,20 @@ const Portofolio = () => {
               <h5> Angular -  Laravel  - Mysql -  UML</h5>
 
             </div>
+            <div className='project__me'>
+              <div className='project__me-image'>
+                <img src={ProjetResto} alt="project Image" />
+              </div>
+            </div>
           </div>
         </li>
         <li className='listProject'>
           <div className='container project__container'>
+            <div className='project__me'>
+              <div className='project__me-image'>
+                <img src={ProjetCovid} alt="project Image" />
+              </div>
+            </div>
 
             <div className='project__content'>
 
@@ -48,19 +54,25 @@ const Portofolio = () => {
               </p>
               <h5>Java - Swing Drools - MongoDB   </h5>
               <div className='iconegit'>
-                <a href="https://github.com/ahmedamine12" target="__blank"> <FaGithub /></a>
+                <a href="https://github.com/ahmedamine12/-Test-Covid19" target="__blank"> <FaGithub /></a>
               </div>
 
             </div>
-            <div className='project__me'>
-              <div className='project__me-image'>
-                <img src={ProjetCovid} alt="project Image" />
-              </div>
-            </div>
+
           </div>
         </li>
         <li className='listProject'>
           <div className='container project__container'>
+            <div className='project__content'>
+
+              <h2>Detection of colored objects and their direction </h2>
+              <p>
+                Allows the detection of the object which has the color
+                specify by the user as he determines the direction of the object when it is moving </p>
+              <h5> Python with the use of this modules:argparse - cv2 - imutils - time - VideoStream - numpy</h5>
+              <div className='iconegit'><a href="https://github.com/ahmedamine12/detection-of-colors-and-directions" target="__blank"> <FaGithub /></a></div>
+
+            </div>
             <div className='project__me'>
               <div className='project__me-image'>
                 <HoverVideoPlayer
@@ -85,16 +97,7 @@ const Portofolio = () => {
                 />
               </div>
             </div>
-            <div className='project__content'>
 
-              <h2>Detection of colored objects and their direction </h2>
-              <p>
-                Allows the detection of the object which has the color
-                specify by the user as he determines the direction of the object when it is moving </p>
-              <h5> Python with the use of this modules:argparse - cv2 - imutils - time - VideoStream - numpy</h5>
-              <div className='iconegit'><a href="https://github.com/ahmedamine12/detection-of-colors-and-directions" target="__blank"> <FaGithub /></a></div>
-
-            </div>
           </div>
         </li>
       </ul>
