@@ -9,7 +9,7 @@ import { BiFolder } from 'react-icons/bi'
 import { FaGithub } from 'react-icons/fa'
 const Portofolio = () => {
   return (
-    <section id='portfolio'>
+    <section className='tilte' id='portfolio'>
       <h2>Some Things I’ve Built</h2>
       <ul>
         <li className='listProject'>
