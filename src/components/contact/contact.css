@@ -66,6 +66,7 @@ input,textarea{
     }
     .container.contact__container form{
     width: 90%;
+    gap: 1rem;
     }
     
 }
@@ -75,5 +76,9 @@ input,textarea{
     .container.contact__container{
         width: var(--container-width-sm);
     }
+    .container.contact__container form{
+        width: 80%;
+        gap: 2rem;
+        }
     
 }
