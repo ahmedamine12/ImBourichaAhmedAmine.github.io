@@ -1,7 +1,7 @@
 import React from 'react'
 import './portfolio.css'
 import HoverVideoPlayer from 'react-hover-video-player'
-import ProjetResto from '../../assets/ProjetResto.PNG'
+import ProjetResto from '../../assets/ProjetResto.jpg'
 import ProjetCovid from '../../assets/ProjetCovid.jpeg'
 import VideoDetection1 from '../../assets/VideoDetection.mp4'
 import { BiFolder } from 'react-icons/bi'

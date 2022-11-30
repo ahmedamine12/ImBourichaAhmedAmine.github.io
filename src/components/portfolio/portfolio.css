@@ -190,11 +190,9 @@ padding-inline: 3rem;
         gap: 1rem;
       
     }
-    .project__content p:hover
+.project__content p:hover
 {
-
 transform: none;
-
 }
     .UlListOtherProject
 {
