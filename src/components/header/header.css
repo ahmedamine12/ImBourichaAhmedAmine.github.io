@@ -18,7 +18,12 @@ color: white;
     display: flex;
     gap:1.2rem ;
     justify-content: center;
+   
 }
+.newone{
+    margin-right: 2rem;
+}
+
 
 /*************SOCIALS****************/
 .header__socials {
