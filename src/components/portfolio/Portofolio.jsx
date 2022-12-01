@@ -19,8 +19,7 @@ const Portofolio = () => {
 
               <h2>Generation of dynamic restaurant websites </h2>
               <p>
-                Web application
-                Web Application Functionality: Dynamically create restaurant chain related websites and it offers different functionalities such as menu management, integration of foreign
+                Web Application Functionality : Dynamically create restaurant chain related websites and it offers different functionalities such as menu management, integration of foreign
                 services like “Square Up” and other options.
               </p>
               <h5> Angular -  Laravel  - Mysql -  UML</h5>
@@ -45,12 +44,11 @@ const Portofolio = () => {
 
               <h2>Covid19 Test</h2>
               <p>
-                Desktop App
-                Functionality: Allowing to give the possibility of
+                Desktop App Functionality : Allowing to give the possibility of
                 presence of the Covid-19 disease based on the
                 user symptom, this treatment respects on a system
                 expert integrate, as well as it allows you to view your latest tests without forgetting the possibility of downloading them. It informs us about the health status
-                (number of contaminates, deaths and treating them) of each city.
+                (number of contaminates, deaths and heals) of each city.
               </p>
               <h5>Java - Swing Drools - MongoDB   </h5>
               <div className='iconegit'>
@@ -111,10 +109,10 @@ const Portofolio = () => {
           <p>
             Allows you to control the mouse cursor with the
             voice by specifying the commands to be executed such as the click and
-            double click, Play/pause a video and the movement of the
+            double click, Play/pause a video, and the movement of the
             cursor.
           </p>
-          <h5> Python en utilisant les modules
+          <h5> Python using modules
             suivant : speech_recognition, gui_automation, numpy</h5>
 
         </li>
@@ -135,9 +133,9 @@ const Portofolio = () => {
             <a href="https://github.com/ahmedamine12/Ecomerce-website" target="__blank"> <FaGithub /></a></div>
           <h2>E-Commerce</h2>
           <p>
-            Design and creation of a website
-            dynamic which includes customer management,
-            of administrators, products, stocks and purchase.
+            Design and creation of a dynamic website
+            which includes customer management,
+            of administrators, products, stocks, and purchases.
           </p>
           <h5> Merise - Mysql - php - HTML - CSS - JavaScript</h5>
 
@@ -148,8 +146,8 @@ const Portofolio = () => {
             <a href="https://github.com/ahmedamine12/AppBanqueForm" target="__blank"> <FaGithub /></a></div>
           <h2>Performing banking transactions</h2>
           <p>
-            This project allows us to perform the various banking transactions such as withdrawal and deposit with the possibility of changing
-            currency and the customer can view their account informations
+          This project allows us to perform various banking transactions such as withdrawals and deposit with the possibility of changing
+            currency and the customer can view their account information
           </p>
           <h5> C#  -  SqlServer</h5>
 
@@ -160,7 +158,7 @@ const Portofolio = () => {
             <a href="https://github.com/ahmedamine12/Recrutement-app-" target="__blank"> <FaGithub /></a></div>
           <h2>Recruitment management</h2>
           <p>
-            A web application that is based on the operation of mega servlette its objective is to manage the various postulations of the candidates and
+          A web application that is based on the operation of mega servlette its objective is to manage the various postulations of the candidates and
             to be able to manage them to send them a response afterwards
           </p>
           <h5> Java EE - Jsp</h5>
@@ -171,7 +169,7 @@ const Portofolio = () => {
           <div className='iconegit'><a href="https://github.com/ahmedamine12/" target="__blank"> <FaGithub /></a></div>
           <h2>Application of reports</h2>
           <p>
-            It is an application that has the final goal of creating reports using the companies entered by the user without
+          It is an application that has the final goal of creating reports using the informations of companies entered by the user without
             forgetting that there is a separate management of the companies.
           </p>
           <h5> Pl/sql - Oracle Data base (using Oracle Forms and Reports software)</h5>

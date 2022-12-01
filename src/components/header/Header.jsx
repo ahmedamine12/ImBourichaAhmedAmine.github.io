@@ -3,7 +3,9 @@ import CTA from './CTA'
 import ME from '../../assets/me5.png'
 import HeaderSocials from './HeaderSocials'
 import './header.css'
+
 const Header = () => {
+    
     return (
         <header>
             <div className="container header__container">
