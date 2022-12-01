@@ -174,6 +174,7 @@ padding-inline: 3rem;
 }
 
 
+
 }
 
 
@@ -183,20 +184,29 @@ padding-inline: 3rem;
         width: 80%;
         margin: 0 auto 3rem;
     }
+    .project__me-imag{
+        margin-top: 1rem;
+    }
     .tilte{
         font-size:medium ;
     }
     .project__content {
         text-align: center;
+        
 
     }
     .project__content p {
        
         width: 80%;
-        gap: 1rem;
-        
+        gap: 1rem  ;
       
     }
+    .project__content h5{
+        gap: 1rem;
+        margin-bottom: 2rem;
+       
+    }
+    
 .project__content p:hover
 {
 transform: none;
@@ -209,6 +219,13 @@ transform: none;
     grid-template-columns: repeat(1, 1fr);
     gap:2rem;
     
+}
+.LiListOtherProject p{
+    margin: 1rem;
+    text-align: left;
+}
+.LiListOtherProject h2{
+   font-size: large;
 }
     
 }

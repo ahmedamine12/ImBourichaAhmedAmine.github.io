@@ -29,7 +29,7 @@ const about = () => {
              and forums that interest me, and without forgetting participation 
              in programming competitions.
           </p>
-          <small className='Myquote'> Finally, I can always do better because I love what I do.</small>
+          <small className='Myquote'> Finally I am sure that I can always do better because I am passionate about this field.</small>
           <ImQuotesRight className='icone_quote' />
 
           <div className='talk'>

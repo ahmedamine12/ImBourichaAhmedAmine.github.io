@@ -37,38 +37,6 @@ place-items:center;
 margin:2rem 0 2rem;
 color: var(--color-light);
 }
-
-/*********** MEDIA QUERIES (MEDIUM DEVICES)************/
-@media screen and ( max-width:1024px ) {
-    .about__container{
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-    .about__me{
-        width: 50%;
-        margin: 2rem auto 4rem;
-    }
-    .about__content p {
-        margin: 1rem 0 1.5rem;
-    }
-}
-
-
-/*********** MEDIA QUERIES (Small DEVICES)************/
-@media screen and ( max-width:600px ) {
-    .about__me{
-        width: 65%;
-        margin: 0 auto 3rem;
-        text-align:justify;
-    }
-    .about__content {
-        text-align: center;
-
-    }
-    .about__content p {
-        margin: 1.5rem 0;
-    }
-}
 .icone_quote
 {
     float: right;
@@ -104,6 +72,40 @@ color: var(--color-light);
     color: rgba(238, 224, 224, 0.904);
     
     
+    
+    
    
  }
+
+/*********** MEDIA QUERIES (MEDIUM DEVICES)************/
+@media screen and ( max-width:1024px ) {
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .about__me{
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+    .about__content p {
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+
+/*********** MEDIA QUERIES (Small DEVICES)************/
+@media screen and ( max-width:600px ) {
+    .about__me{
+        width: 65%;
+        margin: 0 auto 3rem;
+        text-align:justify;
+    }
+    .about__content {
+        text-align: center;
+
+    }
+    .about__content p {
+        margin: 1.5rem 0;
+    }
+}
 
