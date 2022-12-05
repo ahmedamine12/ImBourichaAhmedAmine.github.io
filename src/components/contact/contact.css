@@ -53,6 +53,15 @@ input,textarea{
     resize:none ;
  color: white;
 }
+.Messuc{
+   
+    animation: 10s anim-lineUp ease-out infinite;
+    opacity: 2;
+    color: var(--color-primary);
+    font-size: medium;
+    float: right;
+      
+}
 
 
 

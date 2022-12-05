@@ -20,14 +20,9 @@ const about = () => {
           < ImQuotesLeft className='icone_quote2' />
 
           <p>
-            Currently studying software engineering at the Mohammedia
-             Faculty of Science and Technology.I am motivated and I try 
-             to do my best to improve my skills in different areas axes of 
-             T and especially the IT development and AI side.As well as I am 
-             interested in the various extracurricular activities such as 
-             articipation in clubs in different fields, attendance at conferences 
-             and forums that interest me, and without forgetting participation 
-             in programming competitions.
+            I am currently studying software engineering at the Mohammedia Faculty of Science and Technology. I am motivated and I try to do my best to improve my skills in different areas axes of T and especially the IT development and AI side as well as I am interested in various extracurricular activities such as participation in clubs in different fields, attendance at conferences and forums that interest me, and without forgetting participation in programming competitions.
+
+            Finally, I am sure that I can always do better because I am passionate about this field.
           </p>
           <small className='Myquote'> Finally I am sure that I can always do better because I am passionate about this field.</small>
           <ImQuotesRight className='icone_quote' />

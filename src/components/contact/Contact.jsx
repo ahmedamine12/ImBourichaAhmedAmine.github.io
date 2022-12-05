@@ -1,23 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './contact.css'
 import { MdOutlineMail } from 'react-icons/md'
 import { RiMessengerLine } from 'react-icons/ri'
 import { BsWhatsapp } from 'react-icons/bs'
+
 import { useRef } from 'react';
 import emailjs from 'emailjs-com'
 
 const Contact = () => {
+  let [MessSuc,setMessSuc]= useState("");
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-   
-    
+
+
     emailjs.sendForm('service_hnj9aro', 'template_jq5auno', form.current, '_-nz9XSKDZitVPB-q')
       .then((result) => {
-          console.log(result.text);
+        console.log('----------------');
+        console.log(result.text);
+        setMessSuc("Message sent, thank you");
+        console.log(MessSuc);
+        setTimeout(() => {
           e.target.reset();
+          setMessSuc("");
+          
+        }, 1000);
+        console.log(MessSuc);
       }, (error) => {
-          console.log(error.text);
+        console.log(error);
+        setMessSuc("Message not send, connection problem");
+        setTimeout(() => {
+          setMessSuc("");
+         // e.target.reset();
+        }, 4000);
+        
       });
   };
   return (
@@ -50,9 +66,11 @@ const Contact = () => {
         {/*END of OPTION CONTACT*/}
         <form className='form' ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder='Your Full Name' required />
-          <input type="email" name='email' placeholder='Your EMAIL' required />
+          <input type="email" name='email' placeholder='Your Email' required />
           <textarea type="message" name="message" rows="7" placeholder='Your Message' required ></textarea>
           <button type='submit' className='btn btn-primary'>Send Message</button>
+          <h5 className='Messuc'>{MessSuc}</h5>
+          
         </form>
       </div>
     </section>
