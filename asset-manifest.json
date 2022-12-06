@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ImBourichaAhmedAmine.github.io/static/css/main.157b08e7.css",
+    "main.css": "/ImBourichaAhmedAmine.github.io/static/css/main.74198936.css",
     "main.js": "/ImBourichaAhmedAmine.github.io/static/js/main.7cfcd0bb.js",
     "static/media/VideoDetection.mp4": "/ImBourichaAhmedAmine.github.io/static/media/VideoDetection.45cbe334f84025e3b6e7.mp4",
     "static/media/ProjetResto.jpg": "/ImBourichaAhmedAmine.github.io/static/media/ProjetResto.b3fcbd0fc7f5b53e7dc3.jpg",
@@ -9,11 +9,11 @@
     "static/media/CV Bouricha Ahmed Amine.pdf": "/ImBourichaAhmedAmine.github.io/static/media/CV Bouricha Ahmed Amine.cec7b30439e9cd102f72.pdf",
     "static/media/ProjetCovid.jpeg": "/ImBourichaAhmedAmine.github.io/static/media/ProjetCovid.eb7a7d6c112c6a98c771.jpeg",
     "index.html": "/ImBourichaAhmedAmine.github.io/index.html",
-    "main.157b08e7.css.map": "/ImBourichaAhmedAmine.github.io/static/css/main.157b08e7.css.map",
+    "main.74198936.css.map": "/ImBourichaAhmedAmine.github.io/static/css/main.74198936.css.map",
     "main.7cfcd0bb.js.map": "/ImBourichaAhmedAmine.github.io/static/js/main.7cfcd0bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.157b08e7.css",
+    "static/css/main.74198936.css",
     "static/js/main.7cfcd0bb.js"
   ]
 }
