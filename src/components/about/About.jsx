@@ -1,34 +1,35 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me3-removebg-preview1.png'
-import { ImQuotesLeft } from 'react-icons/im'
-import { ImQuotesRight } from 'react-icons/im'
+import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
+import { useTranslation } from 'react-i18next'
 
-const about = () => {
+const About = () => {
+  const { t } = useTranslation();
+  const funFacts = t('about.funfacts', { returnObjects: true }) || [];
+
   return (
-    <section id='about' >
-      <h5>Get to know </h5>
-      <h2 >About Me</h2>
-
+    <section id='about' className='section-fade-in'>
+      <h2>{t('about.title')}</h2>
       <div className='container about__container'>
-        <div className='about__me'>
-          <div className='about__me-image'>
-            <img src={ME} alt="About Image" />
-          </div>
-        </div>
-        <div className='about__content'>
-          < ImQuotesLeft className='icone_quote2' />
-
+        <div className='about__content about-glass-card floating-card'>
+          <ImQuotesLeft className='icone_quote2 animated-quote' />
           <p>
-            I am currently studying software engineering at the Mohammedia Faculty of Science and Technology. I am motivated and I try to do my best to improve my skills in different areas axes of T and especially the IT development and AI side as well as I am interested in various extracurricular activities such as participation in clubs in different fields, attendance at conferences and forums that interest me, and without forgetting participation in programming competitions.
-
-            Finally, I am sure that I can always do better because I am passionate about this field.
+            {t('about.content')}
           </p>
-          <small className='Myquote'> Finally I am sure that I can always do better because I am passionate about this field.</small>
-          <ImQuotesRight className='icone_quote' />
-
+          <div className="about-funfacts">
+            {funFacts.map((fact, i) => (
+              <span className="about-funfact-pill" key={i}>{fact}</span>
+            ))}
+          </div>
+          <div className="about-signature animated-signature">
+            — Bouricha Ahmed Amine
+          </div>
+          <ImQuotesRight className='icone_quote animated-quote' />
+          <div className='about-quote-animated'>
+            <span className="about-quote">{t('about.quote')}</span>
+          </div>
           <div className='talk'>
-            <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+            <a href="#contact" className='btn btn-primary'>{t('contact.send')}</a>
           </div>
         </div>
       </div>
@@ -36,4 +37,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About

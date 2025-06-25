@@ -1,0 +1,154 @@
+{
+  "header": {
+    "hello": "Bonjour, je suis",
+    "role": "Ingénieur Logiciel",
+    "scroll": "Faire défiler vers le bas"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "content": "Salut, je suis ingénieur logiciel, passionné par la création de solutions qui font vraiment la différence. J'adore les projets qui sortent de l'ordinaire, les idées qui bousculent, et les équipes qui osent innover. Curieux de nature, j'apprends vite et je prends plaisir à transformer chaque défi en opportunité de progresser. Pour moi, la technologie n'a de sens que si elle rapproche les gens et simplifie la vie. Si vous cherchez quelqu'un qui avance avec énergie, qui aime sortir du cadre et qui garde toujours le sourire, alors on est faits pour s'entendre.",
+    "quote": "Je crois sincèrement qu'avec de la passion et de l'engagement, rien n'est impossible dans ce métier.",
+    "funfacts": [
+      "☕ Fan de café",
+      "🚀 Passionné de nouvelles technologies"
+    ]
+  },
+  "skills": {
+    "title": "Compétences",
+    "programming": "Langages de programmation",
+    "web": "Technologies web",
+    "devops": "DevOps & Cloud",
+    "databases": "Bases de données",
+    "design": "Conception & Méthodologie",
+    "managerial": "Compétences managériales",
+    "managerial_skills": {
+      "adaptability": "Adaptabilité",
+      "autonomy": "Autonomie",
+      "project_management": "Gestion de projet",
+      "problem_solving": "Résolution de problèmes"
+    }
+  },
+  "projects": {
+    "experience": "Projets d'expérience professionnelle",
+    "academic": "Projets académiques et personnels",
+    "list": [
+      {
+        "title": "Plateforme IA de gestion des risques des projets verts",
+        "role": "Ingénieur Logiciel | CDI chez Xelops Technologies",
+        "date": "Mars 2024 - (actuel)",
+        "description": "Développement d'une application web full-stack pour la gestion et l'évaluation des risques des projets verts pour un client. La plateforme intègre un module IA existant (développé en Python) exposé via API pour l'estimation des risques, avec adaptation de la plateforme web pour exploiter ses résultats, fournissant des analyses et tableaux de bord avancés pour la prise de décision.",
+        "tech": ["React", "Spring Boot", "PostgreSQL", "Docker", "Azure", "Python"]
+      },
+      {
+        "title": "Plateforme de gestion digitale des associations",
+        "role": "Ingénieur Logiciel Full Stack | Stage PFE chez Xelops Technologies (ex Neoxia Maroc)",
+        "date": "Février 2023 - (en cours)",
+        "description": "Participation à la mise en œuvre d'une plateforme digitale de gestion d'association, fournissant des outils complets pour la gestion des opérations organisationnelles et des interactions avec les membres.",
+        "tech": ["Spring Boot", "Flyway", "React","PostgreSQL", "Redis", "Jenkins", "Azure"]
+      },
+      {
+        "title": "Optimisation des tests fonctionnels automatisés",
+        "role": "Ingénieur Logiciel Full Stack | Stage d'été chez Xelops Technologies (ex Neoxia Maroc)",
+        "date": "Juillet 2023 - Juin 2023",
+        "description": "Conception de tests fonctionnels automatisés avec un accent particulier sur l'optimisation de leur temps d'exécution, garantissant non seulement la précision mais aussi l'efficacité des procédures de test.",
+        "tech": ["Java", "Cucumber", "QAF", "Selenium", "TestNG"]
+      },
+      {
+        "title": "Application web de services d'amélioration de l'habitat",
+        "role": "Ingénieur Logiciel Full Stack | Stage PFA chez Saweblia",
+        "date": "Mai 2023 - Juin 2023",
+        "description": "Création d'une application web qui aide les clients à décrire leurs besoins ou problèmes d'amélioration de l'habitat, puis à planifier leur intervention selon leurs exigences, ainsi que la création d'un gestionnaire pour aider l'administrateur à gérer ces demandes.",
+        "tech": [".NET 6", "Angular", "MySQL"]
+      },
+      {
+        "title": "Générateur de sites web pour chaînes de restaurants",
+        "role": "Ingénieur Logiciel Full Stack | Stage d'été chez Tekcy",
+        "date": "Avril 2022 - Août 2022",
+        "description": "Création d'une application web qui aide les clients à créer facilement des sites web pour leur chaîne de restaurants, ainsi qu'à intégrer divers services externes tels que SQUARE UP et UBER EATS.",
+        "tech": ["Laravel", "Angular", "MySQL"]
+      }
+    ],
+    "academicList": [
+      {
+        "date": "Janvier 2024 - Février 2024",
+        "role": "Application Web",
+        "title": "Hiring Sport - Plateforme d'emploi étudiant",
+        "description": "Une application qui aide les étudiants à trouver des offres d'emploi ou de stage, à postuler, à s'entraîner sur des QCM, et à passer les QCM des offres partagées.",
+        "tech": ["React", "Spring Boot", "PostgreSQL", "Docker", "Jenkins", "Kubernetes", "Google Cloud"],
+        "github": "https://github.com/Hiring-Spot",
+        "icon": "FaLaptopCode"
+      },
+      {
+        "date": "Novembre 2023 - Janvier 2024",
+        "role": "Application Mobile",
+        "title": "Smart Navigation - Application de navigation micro-services",
+        "description": "Une application de navigation micro-services qui suggère des itinéraires pour atteindre les événements les plus proches, en proposant des détours si plusieurs événements se trouvent sur le trajet principal.",
+        "tech": ["Flutter", "Spring Boot", "PostGIS", "Redis", "MongoDB", "Docker", "Jenkins", "Kubernetes", "Google Cloud"],
+        "github": "https://github.com/Smart-Navigation",
+        "icon": "FaMapMarkedAlt"
+      },
+      {
+        "date": "Janvier 2023 - Février 2023",
+        "role": "Application Web",
+        "title": "Système de gestion Import-Export",
+        "description": "Une application de gestion des importations et exportations dans le cadre des régimes économiques douaniers (RED) pour VINCI ENERGIES MAROC.",
+        "tech": ["Spring Boot", "React", "MySQL"],
+        "github": "https://github.com/ahmedamine12/Import-Export-RED-Project",
+        "icon": "FaDatabase"
+      },
+      {
+        "role": "Application Desktop",
+        "date": "Octobre 2021 - Décembre 2021",
+        "title": "Contrôle du curseur par la voix",
+        "description": "Permet de contrôler le curseur de la souris par commandes vocales, incluant des actions comme clic, double-clic, lecture/pause d'une vidéo et déplacement du curseur.",
+        "tech": ["Python", "speech_recognition", "gui_automation", "numpy"],
+        "github": "https://github.com/ahmedamine12/controlling-mousse",
+        "icon": "FaMousePointer"
+      },
+      {
+        "role": "Application Desktop",
+        "date": "Octobre 2021 - Décembre 2021",
+        "title": "Détection d'objets colorés et de leur direction",
+        "description": "Permet la détection d'objets ayant une couleur spécifique définie par l'utilisateur, ainsi que l'orientation de l'objet en mouvement.",
+        "tech": ["Python", "argparse", "cv2", "imutils", "time", "VideoStream", "numpy"],
+        "github": "https://github.com/ahmedamine12/detection-of-colors-and-directions",
+        "icon": "FaPalette"
+      },
+      {
+        "role": "Application Desktop",
+        "date": "Février 2022 - Mars 2022",
+        "title": "Système expert Covid-19",
+        "description": "Permet de donner la possibilité de présence de la maladie Covid-19 en se basant sur les symptômes de l'utilisateur, ce traitement est réalisé sur un système expert intégré.",
+        "tech": ["Java", "Drools", "MongoDB"],
+        "github": "https://github.com/ahmedamine12/-Test-Covid19",
+        "icon": "FaVirus"
+      },
+      {
+        "title": "Easy-Deliver - Application d'optimisation de livraison",
+        "role": "Application Mobile",
+        "description": "Une application React Native pour optimiser les itinéraires de livraison : calcule le chemin le plus court entre les points de livraison, gère les produits à livrer et estime les coûts de livraison par distance.",
+        "tech": ["React Native", "Spring Boot", "Docker", "PostgreSQL", "Redis", "Google Maps API"],
+        "github": "https://github.com/Easy-Deliver",
+        "icon": "FaMobileAlt"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Votre nom complet",
+    "email": "Votre e-mail",
+    "message": "Votre message",
+    "send": "Envoyer le message"
+  },
+  "footer": {
+    "copyright": "Tous droits réservés"
+  },
+  "download_cv": "Télécharger le CV",
+  "lets_talk": "Discutons",
+  "thankyou_modal": {
+    "title": "Merci d'avoir visité !",
+    "message": "Merci d'avoir visité mon portfolio ! J'apprécie votre temps et votre intérêt. Je suis toujours heureux d'échanger et de collaborer. Passez une excellente journée ! 🎉",
+    "close": "Fermer"
+  },
+  "welcome_portfolio": "Bienvenue sur mon portfolio !"
+} 

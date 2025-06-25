@@ -1,35 +1,99 @@
 nav {
-    background: rgba(113, 124, 113, 0.336) ;
-    width: max-content ;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: max-content;
     display: block;
-    padding: 0.7rem 1.7rem;
-    z-index: 2;
+    padding: 1rem 2rem;
+    z-index: 999;
     position: fixed;
     left: 50%;
     transform: translate(-50%);
     bottom: 2rem;
-    display:flex;
-    gap: 0.8rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(15px);
- 
+    display: flex;
+    gap: 1rem;
+    border-radius: var(--border-radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
 }
+
+nav:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
 nav a {
     background: transparent;
-    padding: 0.9rem;
+    padding: 1rem;
     border-radius: 50%;
     display: flex;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.623);
+    font-size: 1.2rem;
+    color: var(--color-light);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-nav a:hover
-{
-    background: rgb(26, 26, 39);
-   
-
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: 50%;
+    transform: scale(0);
+    transition: var(--transition);
+    z-index: -1;
 }
+
+nav a:hover {
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+nav a:hover::before {
+    transform: scale(1);
+}
+
 nav a.active {
-    background: rgb(26, 26, 39);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-variant));
+    color: var(--color-dark);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-3px);
+}
+
+nav a.active::before {
+    transform: scale(1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 0.8rem 1.5rem;
+        gap: 0.8rem;
+        bottom: 1.5rem;
+    }
+    
+    nav a {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 0.6rem 1rem;
+        gap: 0.6rem;
+        bottom: 1rem;
+    }
+    
+    nav a {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
 }
 

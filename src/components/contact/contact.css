@@ -12,29 +12,78 @@
 }
 .contact__option
 {
-    background: rgb(26, 26, 39) ;
-    padding: 1.2rem;
-    border-radius: 1.2rem;
+    background: var(--color-glass);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 1.5rem;
+    border: 2px solid var(--color-border);
+    box-shadow: 0 8px 32px rgba(63, 167, 214, 0.10), 0 2px 8px rgba(0,0,0,0.10);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
     text-align: center;
-    border: 1px solid transparent;
-    transition: var(--transition);
+    color: var(--color-white);
+    transition: box-shadow 0.3s, border 0.3s, background 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
-.contact__option:hover{
-    background: transparent ;
-    border-color:white ;
+.contact__option::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s;
 }
-.contact__option-icon{
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-
+.contact__option:hover::before {
+    transform: scaleX(1);
+}
+.contact__option:hover {
+    box-shadow: 0 16px 48px rgba(63, 167, 214, 0.18), 0 0 0 4px var(--color-primary-variant);
+    border-color: var(--color-primary);
+    background: rgba(63, 167, 214, 0.13);
+    transform: translateY(-6px) scale(1.03);
+}
+.contact__option-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+    color: var(--color-primary);
+    transition: color 0.3s, transform 0.3s;
+    filter: drop-shadow(0 2px 8px rgba(63, 167, 214, 0.10));
+}
+.contact__option:hover .contact__option-icon {
+    color: var(--color-secondary);
+    transform: scale(1.18) rotate(-8deg);
+}
+.contact__option h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.contact__option h6 {
+    color: var(--color-light);
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 400;
 }
 .contact__option a {
     margin-top: 0.7rem;
     display: inline-block;
-    font-size: 0.7rem;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    border-radius: 1rem;
+    padding: 0.3rem 1.1rem;
+    background: rgba(0,212,255,0.08);
+    border: 1px solid transparent;
+    transition: color 0.2s, background 0.3s, border 0.3s;
 }
-.contact__option h4 {
-    color: white;
+.contact__option a:hover {
+    color: var(--color-secondary);
+    background: rgba(224, 122, 95, 0.10);
+    border-color: var(--color-secondary);
 }
 
 /******************** FORM ***********************/
@@ -43,24 +92,54 @@ form{
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    background: var(--color-glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(63, 167, 214, 0.10), 0 2px 8px rgba(0,0,0,0.10);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border: 2px solid var(--color-border);
+    transition: background 0.3s, box-shadow 0.3s, border 0.3s;
 }
 input,textarea{
     width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: transparent;
-    border: 2px solid white;
+    padding: 1.2rem;
+    border-radius: 0.7rem;
+    background: rgba(255,255,255,0.04);
+    border: 2px solid var(--color-border);
     resize:none ;
- color: white;
+    color: var(--color-white);
+    font-size: 1rem;
+    transition: background 0.3s, border 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(63, 167, 214, 0.06);
+}
+input:focus, textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    background: rgba(63, 167, 214, 0.08);
+    box-shadow: 0 0 0 2px var(--color-primary-variant);
+}
+.btn.btn-primary {
+    animation: ctaPulse 2.2s infinite alternate;
+    box-shadow: 0 0 0 0 #00d4ff88, 0 0 16px 0 #ff6b6b44;
+    transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+}
+.btn.btn-primary:active {
+    animation: none;
+    box-shadow: 0 0 0 8px #00d4ff22, 0 0 32px 0 #ff6b6b66;
 }
 .Messuc{
-   
     animation: 10s anim-lineUp ease-out infinite;
     opacity: 2;
     color: var(--color-primary);
     font-size: medium;
     float: right;
-      
+    background: var(--color-glass);
+    border-radius: 1rem;
+    padding: 0.5rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(63, 167, 214, 0.10);
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 

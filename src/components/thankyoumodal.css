@@ -1,0 +1,118 @@
+.thankyou-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.28);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.thankyou-modal {
+  background: rgba(255,255,255,0.95);
+  border-radius: 2rem;
+  box-shadow: 0 16px 48px rgba(63, 167, 214, 0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 400px;
+  width: 95vw;
+  color: #232832;
+  position: relative;
+  text-align: center;
+  animation: popIn 0.5s cubic-bezier(0.4,0,0.2,1);
+  overflow: hidden;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.85) translateY(40px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.thankyou-modal h2 {
+  color: #0077b6;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.thankyou-modal p {
+  color: #4a5a6a;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.thankyou-close-btn {
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0077b633;
+  transition: background 0.2s, color 0.2s;
+}
+.thankyou-close-btn:hover {
+  background: #ffb4a2;
+  color: #232832;
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 18px;
+  border-radius: 3px;
+  opacity: 0.85;
+  animation: confetti-fall 1.8s linear infinite;
+}
+.confetti-0 { background: #0077b6; left: 10%; animation-delay: 0s; }
+.confetti-1 { background: #ffb4a2; left: 25%; animation-delay: 0.3s; }
+.confetti-2 { background: #3fa7d6; left: 40%; animation-delay: 0.6s; }
+.confetti-3 { background: #e07a5f; left: 60%; animation-delay: 0.9s; }
+.confetti-4 { background: #00d4ff; left: 75%; animation-delay: 1.2s; }
+.confetti-5 { background: #bfc9d1; left: 90%; animation-delay: 1.5s; }
+
+@keyframes confetti-fall {
+  0% { top: -20px; transform: rotate(0deg) scale(1); }
+  80% { transform: rotate(180deg) scale(1.1); }
+  100% { top: 110%; transform: rotate(360deg) scale(0.95); }
+}
+
+body[data-theme="dark"] .thankyou-modal {
+  background: rgba(35, 40, 50, 0.98);
+  color: #f5f6fa;
+  box-shadow: 0 16px 48px rgba(0, 212, 255, 0.18);
+}
+body[data-theme="dark"] .thankyou-modal h2 {
+  color: #00d4ff;
+}
+body[data-theme="dark"] .thankyou-modal p {
+  color: #bfc9d1;
+}
+body[data-theme="dark"] .thankyou-close-btn {
+  background: #3fa7d6;
+  color: #fff;
+}
+body[data-theme="dark"] .thankyou-close-btn:hover {
+  background: #e07a5f;
+  color: #fff;
+}
+body[data-theme="dark"] .confetti-0 { background: #00d4ff; }
+body[data-theme="dark"] .confetti-1 { background: #e07a5f; }
+body[data-theme="dark"] .confetti-2 { background: #3fa7d6; }
+body[data-theme="dark"] .confetti-3 { background: #ffb4a2; }
+body[data-theme="dark"] .confetti-4 { background: #bfc9d1; }
+body[data-theme="dark"] .confetti-5 { background: #0077b6; } 

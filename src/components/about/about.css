@@ -1,11 +1,14 @@
 .about__container {
-    display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
-.h2{
-    color: white;
+
+.h2 {
+    color: var(--color-white);
 }
 
 .about__me
@@ -32,80 +35,333 @@ place-items:center;
 .about__me-image:hover{
     transform: rotate(20deg);
 }
-.about__content
-{
-margin:2rem 0 2rem;
-color: var(--color-light);
+.about__content {
+    margin: 2rem 0;
+    color: var(--color-light);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-slow);
 }
-.icone_quote
-{
-    float: right;
-    font-size:xx-large;
-   margin-top: 1rem;
 
-  
+.about__content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    transform: scaleX(0);
+    transition: var(--transition);
 }
-.icone_quote2
-{
+
+.about__content:hover::before {
+    transform: scaleX(1);
+}
+
+.about__content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.icone_quote {
+    float: right;
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: var(--color-primary);
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.about__content:hover .icone_quote {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.icone_quote2 {
     float: left;
-    font-size:xx-large;   
-    
+    font-size: 3rem;
+    color: var(--color-primary);
+    opacity: 0.7;
+    transition: var(--transition);
 }
-.talk
-{
+
+.about__content:hover .icone_quote2 {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.talk {
     margin-top: 3rem;
+    text-align: center;
 }
+
 .about__content p {
     margin-top: 3rem;
-    text-align:justify;
-    
-   
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--color-light);
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
 }
-.about__content p:hover{
-   color: white;
-    
-   
+
+.about__content p:hover {
+    color: var(--color-white);
 }
+
 .about__content small {
-    font-size:medium;
-    font-weight: bold;
-    color: rgba(238, 224, 224, 0.904);
-    
-    
-    
-    
-   
- }
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: block;
+    margin: 2rem 0;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation for content appearing */
+.about__content {
+    animation: contentSlideIn 0.8s ease-out both;
+}
+
+@keyframes contentSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
 /*********** MEDIA QUERIES (MEDIUM DEVICES)************/
-@media screen and ( max-width:1024px ) {
-    .about__container{
-        grid-template-columns: 1fr;
-        gap: 0;
+@media screen and (max-width: 1024px) {
+    .about__container {
+        padding: 1.5rem;
     }
-    .about__me{
-        width: 50%;
-        margin: 2rem auto 4rem;
+    
+    .about__content {
+        padding: 2.5rem;
     }
+    
     .about__content p {
         margin: 2.5rem 0 1.5rem;
+        font-size: 1rem;
     }
 }
 
-
-/*********** MEDIA QUERIES (Small DEVICES)************/
-@media screen and ( max-width:600px ) {
-    .about__me{
-        width: 65%;
-        margin: 0 auto 3rem;
-        text-align:justify;
+/*********** MEDIA QUERIES (SMALL DEVICES)************/
+@media screen and (max-width: 600px) {
+    .about__container {
+        padding: 1rem;
     }
+    
     .about__content {
+        padding: 2rem;
         text-align: center;
-
     }
+    
     .about__content p {
         margin: 1.5rem 0;
+        text-align: justify;
+        font-size: 0.95rem;
     }
+    
+    .icone_quote,
+    .icone_quote2 {
+        font-size: 2rem;
+    }
+    
+    .about__content small {
+        font-size: 1rem;
+    }
+}
+
+.about-animated-underline {
+  position: relative;
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.about-animated-underline::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  animation: underlineSlide 2.5s infinite alternate;
+}
+@keyframes underlineSlide {
+  0% { width: 40px; }
+  100% { width: 80px; }
+}
+
+.about-glass-card {
+  background: var(--color-glass);
+  border: 1.5px solid var(--color-border);
+  box-shadow: 0 8px 32px rgba(63, 167, 214, 0.10), 0 2px 8px rgba(0,0,0,0.12);
+  border-radius: 2rem;
+  padding: 2.5rem 2.2rem 2.2rem 2.2rem;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-card {
+  animation: floatProfile 4s ease-in-out infinite alternate;
+}
+@keyframes floatProfile {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-12px); }
+}
+
+.animated-quote {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  opacity: 0.85;
+  animation: quoteFloat 2.5s ease-in-out infinite alternate;
+  transition: color 0.3s;
+}
+.icone_quote2.animated-quote {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.5rem;
+}
+.icone_quote.animated-quote {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.5rem;
+}
+@keyframes quoteFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+.about__content p {
+  color: var(--color-white);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin: 2.2rem 0 1.2rem 0;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.about-highlight {
+  color: var(--color-primary);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.about-quote {
+  display: block;
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.about-signature {
+  margin-top: 2.2rem;
+  font-family: 'Pacifico', 'Caveat', cursive, sans-serif;
+  font-size: 1.3rem;
+  color: var(--color-secondary);
+  text-align: right;
+  letter-spacing: 1.2px;
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 900px) {
+  .about-glass-card {
+    padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+    max-width: 98vw;
+  }
+  .about-animated-underline {
+    font-size: 2rem;
+  }
+}
+
+#about {
+  text-align: center;
+}
+
+.about-funfacts {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.2rem 0 0.7rem 0;
+}
+.about-funfact-pill {
+  background: rgba(63, 167, 214, 0.13);
+  color: var(--color-primary);
+  border-radius: 2rem;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(63, 167, 214, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1.5px solid var(--color-border);
+  transition: background 0.3s, color 0.3s;
+}
+.about-funfact-pill:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.animated-signature {
+  font-family: 'Pacifico', 'Caveat', cursive, sans-serif;
+  font-size: 1.3rem;
+  color: var(--color-secondary);
+  margin: 1.2rem 0 0.7rem 0;
+  text-align: right;
+  letter-spacing: 1.5px;
+  animation: signatureFadeIn 1.8s ease-in;
+}
+@keyframes signatureFadeIn {
+  from { opacity: 0; transform: translateX(40px) scale(0.95); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+.about-quote-animated {
+  display: flex;
+  justify-content: center;
+  margin: 1.2rem 0 1.5rem 0;
+  animation: quoteTypeIn 2.2s steps(40, end);
+}
+@keyframes quoteTypeIn {
+  from { opacity: 0; letter-spacing: 0.5em; }
+  to { opacity: 1; letter-spacing: normal; }
 }
 

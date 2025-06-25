@@ -8,10 +8,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^10.18.0",
+    "i18next": "^25.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga": "^3.3.1",
     "react-hover-video-player": "^9.7.1",
+    "react-i18next": "^15.5.3",
     "react-icons": "^4.6.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
