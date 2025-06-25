@@ -344,4 +344,248 @@ a:hover, .iconegit a:hover, .project-links a:hover {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
     }
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .desktop-lang-switcher {
+        display: none !important;
+    }
+
+    .mobile-lang-switcher {
+        display: block !important;
+    }
+
+    .theme-toggle-btn {
+        top: 1.2rem !important;
+        right: 1.2rem !important;
+        bottom: unset !important;
+    }
+
+    .mobile-lang-fab {
+        background: var(--color-glass);
+        border: 2px solid var(--color-border);
+        border-radius: 50%;
+        width: 2.7rem;
+        height: 2.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        color: var(--color-primary);
+        box-shadow: 0 2px 8px rgba(63, 167, 214, 0.10);
+        cursor: pointer;
+        outline: none;
+        position: relative;
+    }
+
+    .mobile-lang-popup {
+        position: absolute;
+        left: 0;
+        top: 3.2rem;
+        background: var(--color-glass);
+        border: 2px solid var(--color-border);
+        border-radius: 1rem;
+        box-shadow: 0 2px 8px rgba(63, 167, 214, 0.10);
+        padding: 0.3rem 0.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        z-index: 1300;
+    }
+
+    .mobile-lang-popup button {
+        background: transparent;
+        border: none;
+        color: var(--color-primary);
+        font-size: 1rem;
+        padding: 0.2rem 0.7rem;
+        border-radius: 0.7rem;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .mobile-lang-popup button.active,
+    .mobile-lang-popup button:hover {
+        background: var(--color-primary);
+        color: var(--color-white);
+    }
+}
+
+/* Language switcher visibility control */
+.desktop-lang-switcher {
+    display: block !important;
+}
+.mobile-lang-switcher {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .desktop-lang-switcher {
+        display: none !important;
+    }
+    .mobile-lang-switcher {
+        position: fixed;
+        top: 1.2rem !important;
+        left: 1.2rem !important;
+        z-index: 1200;
+        display: block !important;
+    }
+    .theme-toggle-btn,
+    .mobile-lang-fab {
+        width: 2.7rem !important;
+        height: 2.7rem !important;
+        font-size: 1.3rem !important;
+        border-radius: 50% !important;
+        background: var(--color-glass) !important;
+        border: 2px solid var(--color-border) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: var(--color-primary) !important;
+        box-shadow: 0 2px 8px rgba(63, 167, 214, 0.10) !important;
+        padding: 0 !important;
+        top: 1.2rem !important;
+    }
+    .theme-toggle-btn {
+        position: fixed !important;
+        right: 1.2rem !important;
+        left: unset !important;
+        bottom: unset !important;
+    }
+    .mobile-lang-fab {
+        position: relative !important;
+    }
+    .mobile-lang-popup {
+        position: absolute !important;
+        left: 0;
+        top: 3.2rem;
+        background: var(--color-glass);
+        border: 2px solid var(--color-border);
+        border-radius: 1rem;
+        box-shadow: 0 2px 8px rgba(63, 167, 214, 0.10);
+        padding: 0.3rem 0.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        z-index: 1300;
+    }
+    .mobile-lang-popup button {
+        background: transparent;
+        border: none;
+        color: var(--color-primary);
+        font-size: 1rem;
+        padding: 0.2rem 0.7rem;
+        border-radius: 0.7rem;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+    .mobile-lang-popup button.active,
+    .mobile-lang-popup button:hover {
+        background: var(--color-primary);
+        color: var(--color-white);
+    }
+}
+
+.window-theme-toggle {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 600px;
+}
+.window-frame {
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 0.6rem;
+  background: var(--color-glass);
+  border: 2px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(63, 167, 214, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s, border 0.4s;
+  overflow: hidden;
+}
+.window-frame.day {
+  background: linear-gradient(135deg, #eaf6fb 70%, #b5d0e6 100%);
+}
+.window-frame.night {
+  background: linear-gradient(135deg, #232832 70%, #3fa7d6 100%);
+}
+.window-pane {
+  width: 2.1rem;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.window-sun {
+  color: #f7b801;
+  filter: drop-shadow(0 0 6px #ffe066);
+  transition: color 0.4s;
+}
+.window-moon {
+  color: #b5d0e6;
+  filter: drop-shadow(0 0 6px #3fa7d6);
+  transition: color 0.4s;
+}
+.window-theme-toggle.flipping .window-frame {
+  animation: windowFlip 0.4s;
+}
+@keyframes windowFlip {
+  0% { transform: rotateY(0deg); }
+  60% { transform: rotateY(90deg); }
+  100% { transform: rotateY(180deg); }
+}
+@media (max-width: 600px) {
+  .window-theme-toggle {
+    top: 1.2rem !important;
+    right: 1.2rem !important;
+    width: 2.7rem !important;
+    height: 2.7rem !important;
+  }
+  .window-frame {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+  .window-pane {
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.2rem;
+  }
+}
+
+.theme-easter-egg-popup {
+  position: fixed;
+  top: 4.5rem;
+  right: 1.2rem;
+  z-index: 2000;
+  background: var(--color-glass);
+  color: var(--color-primary);
+  border-radius: 1rem;
+  padding: 0.7rem 1.3rem;
+  font-size: 1.08rem;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+  box-shadow: 0 4px 16px rgba(63, 167, 214, 0.13);
+  animation: eggFadeInOut 2s;
+  pointer-events: none;
+  text-align: center;
+}
+@keyframes eggFadeInOut {
+  0% { opacity: 0; transform: translateY(-10px) scale(0.95); }
+  10% { opacity: 1; transform: translateY(0) scale(1.04); }
+  90% { opacity: 1; transform: translateY(0) scale(1.04); }
+  100% { opacity: 0; transform: translateY(-10px) scale(0.95); }
 }

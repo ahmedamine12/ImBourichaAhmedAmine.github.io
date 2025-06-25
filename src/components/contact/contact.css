@@ -141,11 +141,25 @@ input:focus, textarea:focus {
     margin-top: 0.5rem;
     margin-right: 0.5rem;
 }
+.contact-success-anim {
+  animation: contactSuccessFade 3.5s;
+  color: #2ecc40;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-top: 1.1rem;
+  background: rgba(46, 204, 64, 0.08);
+  border-radius: 0.7rem;
+  padding: 0.5rem 1.2rem;
+  box-shadow: 0 2px 8px rgba(46, 204, 64, 0.08);
+  text-align: center;
+}
+@keyframes contactSuccessFade {
+  0% { opacity: 0; transform: translateY(10px) scale(0.98); }
+  10% { opacity: 1; transform: translateY(0) scale(1.04); }
+  90% { opacity: 1; transform: translateY(0) scale(1.04); }
+  100% { opacity: 0; transform: translateY(-10px) scale(0.98); }
+}
 
-
-
-
-  
 /*********** MEDIA QUERIES (MEDIUM DEVICES)************/
 @media screen and ( max-width:1024px ) {
     .container.contact__container{
@@ -170,4 +184,20 @@ input:focus, textarea:focus {
         gap: 2rem;
         }
     
+}
+
+.contact-spinner {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  border: 2.5px solid #fff;
+  border-top: 2.5px solid #3fa7d6;
+  border-radius: 50%;
+  animation: contactSpin 0.7s linear infinite;
+  margin-right: 0.7em;
+  vertical-align: middle;
+}
+@keyframes contactSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -844,3 +844,97 @@ body[data-theme="light"] .scroll-text {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.typing-intro {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+  font-size: 1.15rem;
+  color: var(--color-white);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2.5rem;
+  box-shadow: 0 2px 16px rgba(63, 167, 214, 0.07), 0 1.5px 0 var(--color-border);
+  text-align: left;
+  min-height: 220px;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  animation: fadeIn 0.7s;
+  letter-spacing: 0.01em;
+  transition: background 0.4s, color 0.4s, border 0.4s, border-radius 0.4s, padding 0.4s, min-height 0.4s, max-width 0.4s;
+}
+body[data-theme="light"] .typing-intro {
+  color: #232832;
+  background: #f9fafb;
+  border: 1.5px solid #e0e4ea;
+  box-shadow: 0 2px 16px rgba(63, 167, 214, 0.07), 0 1.5px 0 #e0e4ea;
+}
+.typing-cursor {
+  display: inline-block;
+  width: 1ch;
+  color: #3fa7d6;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.magic-fade-in {
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: none;}
+}
+
+.flip-card-container {
+  perspective: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flip-card-container.flip-out .typing-intro {
+  animation: flipOutGlow 0.7s forwards;
+  box-shadow: 0 0 32px 8px #3fa7d6, 0 2px 16px rgba(63, 167, 214, 0.07);
+}
+@keyframes flipOutGlow {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+    box-shadow: 0 0 0 0 #3fa7d6;
+  }
+  60% {
+    opacity: 0.7;
+    transform: rotateY(60deg) scale(0.95);
+    box-shadow: 0 0 32px 8px #3fa7d6;
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.8);
+    box-shadow: 0 0 64px 16px #3fa7d6;
+  }
+}
+
+.header-glass-card.magic-fade-in {
+  animation: popInHighlight 0.7s;
+}
+@keyframes popInHighlight {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+    box-shadow: 0 0 32px 8px #3fa7d6;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.04);
+    box-shadow: 0 0 16px 4px #3fa7d6;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: none;
+  }
+}

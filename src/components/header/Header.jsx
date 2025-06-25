@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CTA from './CTA'
 import ME from '../../assets/proPic.JPG'
 import HeaderSocials from './HeaderSocials'
@@ -14,8 +14,64 @@ const FloatingBlobs = () => (
   </>
 );
 
+const TypingIntro = ({ onDone }) => {
+  const { t, i18n } = useTranslation();
+  const lines = t('typing_intro', { returnObjects: true });
+  const [displayed, setDisplayed] = useState(Array(lines.length).fill(''));
+  const [line, setLine] = useState(0);
+  const [char, setChar] = useState(0);
+  const [lang, setLang] = useState(i18n.language);
+
+  React.useEffect(() => {
+    // Reset typing if language changes
+    if (i18n.language !== lang) {
+      setDisplayed(Array(lines.length).fill(''));
+      setLine(0);
+      setChar(0);
+      setLang(i18n.language);
+      return;
+    }
+    if (line < lines.length) {
+      if (char < lines[line].length) {
+        const timeout = setTimeout(() => {
+          setDisplayed(d => {
+            const newD = [...d];
+            newD[line] += lines[line][char];
+            return newD;
+          });
+          setChar(c => c + 1);
+        }, 45);
+        return () => clearTimeout(timeout);
+      } else {
+        setLine(l => l + 1);
+        setChar(0);
+      }
+    } else {
+      setTimeout(onDone, 900);
+    }
+  }, [char, line, lines, onDone, i18n.language, lang]);
+
+  return (
+    <div className="typing-intro">
+      {lines.map((l, idx) => (
+        <div key={idx}>
+          {displayed[idx]}{line === idx && <span className="typing-cursor">|</span>}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const Header = () => {
     const { t } = useTranslation();
+    const [showMainHeader, setShowMainHeader] = useState(false);
+    const [flip, setFlip] = useState(false);
+
+    const handleTypingDone = () => {
+      setFlip(true);
+      setTimeout(() => setShowMainHeader(true), 700); // match flip animation duration
+    };
+
     return (
       <header>
         <div className="hero-blob hero-blob1"></div>
@@ -23,19 +79,25 @@ const Header = () => {
         <div className="hero-blob hero-blob3"></div>
         <div className="container header__container">
           <FloatingBlobs />
-          <div className='me-glass-wrapper floating-profile'>
+          <div className='me-glass-wrapper floating-profile' style={{ marginBottom: '1rem' }}>
             <div className='me-glass-border'>
               <img src={ME} alt="me" className='me-img' />
             </div>
           </div>
-          <div className="header-glass-card magic-fade-in">
-            <h1 className="big-gradient-name animated-gradient">Bouricha Ahmed Amine</h1>
-            <h5 className="text-light" style={{fontSize: '1.3rem', marginBottom: '1.5rem'}}>{t('header.role')}</h5>
-            <div className="welcome-fade-in">{t('welcome_portfolio')}</div>
-            <CTA />
-            <HeaderSocials/>
-          </div>
-          <div className='scroll__down-wrapper'>
+          {!showMainHeader ? (
+            <div className={`flip-card-container${flip ? ' flip-out' : ''}`}>
+              <TypingIntro onDone={handleTypingDone} />
+            </div>
+          ) : (
+            <div className="header-glass-card magic-fade-in">
+              <h1 className="big-gradient-name animated-gradient">Bouricha Ahmed Amine</h1>
+              <h5 className="text-light" style={{fontSize: '1.3rem', marginBottom: '1.5rem'}}>{t('header.role')}</h5>
+              <div className="welcome-fade-in">{t('welcome_portfolio')}</div>
+              <CTA />
+              <HeaderSocials/>
+            </div>
+          )}
+          <div className='scroll__down-wrapper hide-on-mobile'>
             <a href="#contact" className='scroll__down'>
               <span className='scroll-arrow-circle floatScrollArrow'>
                 <span className='scroll-arrow-simple'>▼</span>

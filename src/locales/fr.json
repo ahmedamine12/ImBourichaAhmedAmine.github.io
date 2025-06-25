@@ -33,10 +33,10 @@
     "academic": "Projets académiques et personnels",
     "list": [
       {
-        "title": "Plateforme IA de gestion des risques des projets verts",
-        "role": "Ingénieur Logiciel | CDI chez Xelops Technologies",
+        "title": "Projet client - Xelops Technologies (ex Neoxia Maroc)",
+        "role": "Ingénieur Logiciel | CDI chez Xelops Technologies (ex Neoxia Maroc)",
         "date": "Mars 2024 - (actuel)",
-        "description": "Développement d'une application web full-stack pour la gestion et l'évaluation des risques des projets verts pour un client. La plateforme intègre un module IA existant (développé en Python) exposé via API pour l'estimation des risques, avec adaptation de la plateforme web pour exploiter ses résultats, fournissant des analyses et tableaux de bord avancés pour la prise de décision.",
+        "description": "Développement d'applications web full-stack pour des clients, avec focus sur les technologies modernes et les meilleures pratiques de développement.",
         "tech": ["React", "Spring Boot", "PostgreSQL", "Docker", "Azure", "Python"]
       },
       {
@@ -146,9 +146,16 @@
   "download_cv": "Télécharger le CV",
   "lets_talk": "Discutons",
   "thankyou_modal": {
-    "title": "Merci d'avoir visité !",
-    "message": "Merci d'avoir visité mon portfolio ! J'apprécie votre temps et votre intérêt. Je suis toujours heureux d'échanger et de collaborer. Passez une excellente journée ! 🎉",
+    "title": "Merci d'avoir visité mon portfolio !",
+    "message": "J'apprécie votre temps et votre intérêt. Je suis toujours heureux d'échanger et de collaborer. Passez une excellente journée ! 🎉",
     "close": "Fermer"
   },
-  "welcome_portfolio": "Bienvenue sur mon portfolio !"
+  "welcome_portfolio": "Bienvenue sur mon portfolio !",
+  "toggle_easter_egg": "Je te vois, testeur ! 😏",
+  "typing_intro": [
+    "Salut 👋",
+    "Je suis Bouricha Ahmed Amine 🤓",
+    "Ingénieur Logiciel 💻",
+    "Bienvenue sur mon portfolio !"
+  ]
 } 

@@ -34,21 +34,21 @@
     "list": [
       {
         "date": "March 2024 - (current)",
-        "role": "Software Engineer | Full Time at Xelops Technologies",
-        "title": "AI-Powered Green Project Risk Management Platform",
-        "description": "Development of a full-stack web application for managing and assessing the risks of green projects for a client. The platform integrates an existing AI module (developed in Python) exposed via API for risk estimation, with adaptation of the web platform to leverage its results, providing actionable insights and advanced dashboards for decision-making.",
+        "role": "Software Engineer | Full Time at Xelops Technologies (ex Neoxia Maroc)",
+        "title": "Client Project - Xelops Technologies (ex Neoxia Maroc)",
+        "description": "Development of full-stack web applications for clients, with focus on modern technologies and development best practices.",
         "tech": ["React", "Spring Boot", "PostgreSQL", "Docker", "Azure", "Python"]
       },
       {
         "date": "February 2023 - (ongoing)",
-        "role": "Full Stack Engineer | PFE Internship at Xelops Technologies (ex Neoxia Morocco)",
+        "role": "Full Stack Engineer | PFE Internship at Xelops Technologies (ex Neoxia Maroc)",
         "title": "Digital Association Management Platform",
         "description": "Assistance in implementing a digital association management platform, providing comprehensive tools for managing organizational operations and member interactions.",
         "tech": ["Spring Boot", "Flyway", "React", "PostgreSQL", "Redis", "Jenkins", "Azure"]
       },
       {
         "date": "July 2023 - June 2023",
-        "role": "Full Stack Engineer | Summer Internship at Xelops Technologies (ex Neoxia Morocco)",
+        "role": "Full Stack Engineer | Summer Internship at Xelops Technologies (ex Neoxia Maroc)",
         "title": "Automated Functional Testing Optimization",
         "description": "Design of automated functional tests with particular emphasis on optimizing their execution time, ensuring not only accuracy but also efficiency of testing procedures.",
         "tech": ["Java", "Cucumber", "QAF", "Selenium", "TestNG"]
@@ -146,9 +146,16 @@
   "download_cv": "Download CV",
   "lets_talk": "Let's Talk",
   "thankyou_modal": {
-    "title": "Thank you for visiting!",
-    "message": "Thank you for visiting my portfolio! I appreciate your time and interest. I'm always happy to connect and collaborate. Have a wonderful day! 🎉",
+    "title": "Thank you for visiting my portfolio!",
+    "message": "I appreciate your time and interest. I'm always happy to connect and collaborate. Have a wonderful day! 🎉",
     "close": "Close"
   },
-  "welcome_portfolio": "Welcome to my portfolio!"
+  "welcome_portfolio": "Welcome to my portfolio!",
+  "toggle_easter_egg": "I see you, tester! 😏",
+  "typing_intro": [
+    "Hi 👋",
+    "I'm Bouricha Ahmed Amine 🤓",
+    "Software Engineer 💻",
+    "Welcome to my portfolio!"
+  ]
 } 

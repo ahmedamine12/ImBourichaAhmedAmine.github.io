@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './portfolio.css'
-import { BiFolder } from 'react-icons/bi'
-import { FaGithub, FaExternalLinkAlt, FaLaptopCode, FaMobileAlt, FaRobot, FaDatabase, FaMapMarkedAlt, FaVirus, FaPalette, FaMousePointer } from 'react-icons/fa'
+import { FaGithub, FaLaptopCode, FaMobileAlt, FaRobot, FaDatabase, FaMapMarkedAlt, FaVirus, FaPalette, FaMousePointer } from 'react-icons/fa'
 import { MdVerified } from 'react-icons/md'
-import ProjectModal from './ProjectModal'
-import TechTooltip from './TechTooltip'
 import { useTranslation } from 'react-i18next'
 
 const iconMap = {
@@ -19,8 +16,7 @@ const iconMap = {
 };
 
 const Portofolio = () => {
-  const [modalProject, setModalProject] = useState(null)
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const translatedProjects = t('projects.list', { returnObjects: true });
   const academicProjects = t('projects.academicList', { returnObjects: true }) || [];
   return (

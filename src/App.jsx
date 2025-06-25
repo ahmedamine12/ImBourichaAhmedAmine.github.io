@@ -8,7 +8,7 @@ import Portfolio from './components/portfolio/Portofolio'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 import Skills from './components/skills/Skills'
-import { FaSun, FaMoon } from 'react-icons/fa'
+import { FaSun, FaMoon, FaGlobe } from 'react-icons/fa'
 import ThankYouModal from './components/ThankYouModal'
 
 const languages = [
@@ -57,35 +57,76 @@ const LanguageSwitcher = () => {
   );
 };
 
-const ThemeToggle = ({ theme, toggleTheme }) => (
-  <button
-    className="theme-toggle-btn"
-    aria-label="Toggle dark/light mode"
-    onClick={toggleTheme}
-    style={{
-      position: 'fixed',
-      top: '2rem',
-      right: '2rem',
-      zIndex: 1000,
-      background: 'var(--color-glass)',
-      border: '2px solid var(--color-border)',
-      borderRadius: '50%',
-      width: '3.2rem',
-      height: '3.2rem',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      boxShadow: '0 4px 16px rgba(63, 167, 214, 0.12)',
-      cursor: 'pointer',
-      transition: 'background 0.4s, border 0.4s',
-      fontSize: '1.6rem',
-      outline: 'none',
-      color: 'var(--color-primary)'
-    }}
-  >
-    {theme === 'light' ? <FaMoon /> : <FaSun />}
-  </button>
-)
+const WindowThemeToggle = ({ theme, toggleTheme, onEasterEgg }) => {
+  const [flipping, setFlipping] = useState(false);
+  const [clicks, setClicks] = useState([]);
+  const handleClick = () => {
+    setFlipping(true);
+    const now = Date.now();
+    setClicks(prev => {
+      const filtered = prev.filter(ts => now - ts < 2000);
+      const updated = [...filtered, now];
+      if (updated.length >= 5) {
+        onEasterEgg && onEasterEgg();
+        return [];
+      }
+      return updated;
+    });
+    setTimeout(() => {
+      toggleTheme();
+      setFlipping(false);
+    }, 400);
+  };
+  return (
+    <button
+      className={`window-theme-toggle${flipping ? ' flipping' : ''}`}
+      aria-label="Toggle dark/light mode"
+      onClick={handleClick}
+    >
+      <div className={`window-frame${theme === 'light' ? ' day' : ' night'}`}> 
+        <div className="window-pane">
+          {theme === 'light' ? (
+            <span className="window-sun"><FaSun /></span>
+          ) : (
+            <span className="window-moon"><FaMoon /></span>
+          )}
+        </div>
+      </div>
+    </button>
+  );
+};
+
+const MobileLanguageSwitcher = () => {
+  const { i18n } = useTranslation();
+  const [open, setOpen] = React.useState(false);
+  return (
+    <div>
+      <button
+        className="mobile-lang-fab"
+        aria-label="Switch language"
+        onClick={() => setOpen(o => !o)}
+      >
+        <FaGlobe />
+      </button>
+      {open && (
+        <div className="mobile-lang-popup">
+          {languages.map(lang => (
+            <button
+              key={lang.code}
+              onClick={() => {
+                i18n.changeLanguage(lang.code);
+                setOpen(false);
+              }}
+              className={i18n.language === lang.code ? 'active' : ''}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -142,10 +183,21 @@ const App = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [showThankYou]);
 
+  const { t } = useTranslation();
+  const [showEasterEgg, setShowEasterEgg] = useState(false);
+  const handleEasterEgg = () => {
+    setShowEasterEgg(true);
+    setTimeout(() => setShowEasterEgg(false), 2000);
+  };
+
   return (  
     <>
-      <LanguageSwitcher />
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      <div className="desktop-lang-switcher"><LanguageSwitcher /></div>
+      <div className="mobile-lang-switcher"><MobileLanguageSwitcher /></div>
+      <WindowThemeToggle theme={theme} toggleTheme={toggleTheme} onEasterEgg={handleEasterEgg} />
+      {showEasterEgg && (
+        <div className="theme-easter-egg-popup">{t('toggle_easter_egg')}</div>
+      )}
       <Header />
       <Nav />
       <About />

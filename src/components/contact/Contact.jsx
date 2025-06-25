@@ -10,14 +10,24 @@ const Contact = () => {
   let [MessSuc, setMessSuc] = useState("");
   const form = useRef();
   const { t } = useTranslation();
+  const [showMsg, setShowMsg] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_1v2w1qg', 'template_6kq8w7d', form.current, 'user_4n1k8k9k9k9k9k9k9')
+    setLoading(true);
+    emailjs.sendForm('service_hnj9aro', 'template_jq5auno', form.current, '_-nz9XSKDZitVPB-q')
       .then((result) => {
-        setMessSuc('Message sent successfully!');
+        setMessSuc('✅ Thanks for reaching out!');
+        setShowMsg(true);
+        e.target.reset();
+        setLoading(false);
+        setTimeout(() => setShowMsg(false), 3500);
       }, (error) => {
-        setMessSuc('Failed to send message.');
+        setMessSuc('❌ Oops! Something went wrong. Please try again.');
+        setShowMsg(true);
+        setLoading(false);
+        setTimeout(() => setShowMsg(false), 2000);
       });
   }
 
@@ -48,12 +58,15 @@ const Contact = () => {
 
         </div>
         {/*END of OPTION CONTACT*/}
-        <form className='form' ref={form} onSubmit={sendEmail}>
+        <form className='form' ref={form} onSubmit={sendEmail} autoComplete="off">
           <input type="text" name='name' placeholder={t('contact.name')} required />
           <input type="email" name='email' placeholder={t('contact.email')} required />
           <textarea type="message" name="message" rows="7" placeholder={t('contact.message')} required ></textarea>
-          <button type='submit' className='btn btn-primary'>{t('contact.send')}</button>
-          <h5 className='Messuc'>{MessSuc}</h5>
+          <button type='submit' className='btn btn-primary' disabled={loading}>
+            {loading && <span className='contact-spinner'></span>}
+            {loading ? 'Sending...' : t('contact.send')}
+          </button>
+          {showMsg && <h5 className='Messuc contact-success-anim'>{MessSuc}</h5>}
         </form>
       </div>
     </section>
