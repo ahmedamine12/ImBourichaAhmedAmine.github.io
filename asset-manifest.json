@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ImBourichaAhmedAmine.github.io/static/css/main.9c7a3fd0.css",
+    "main.css": "/ImBourichaAhmedAmine.github.io/static/css/main.b119e2e0.css",
     "main.js": "/ImBourichaAhmedAmine.github.io/static/js/main.3e36012c.js",
     "static/media/proPic.JPG": "/ImBourichaAhmedAmine.github.io/static/media/proPic.d57c700c1ed325b89418.JPG",
     "index.html": "/ImBourichaAhmedAmine.github.io/index.html",
-    "main.9c7a3fd0.css.map": "/ImBourichaAhmedAmine.github.io/static/css/main.9c7a3fd0.css.map",
+    "main.b119e2e0.css.map": "/ImBourichaAhmedAmine.github.io/static/css/main.b119e2e0.css.map",
     "main.3e36012c.js.map": "/ImBourichaAhmedAmine.github.io/static/js/main.3e36012c.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c7a3fd0.css",
+    "static/css/main.b119e2e0.css",
     "static/js/main.3e36012c.js"
   ]
 }
