@@ -1,19 +1,14 @@
 {
   "files": {
-    "main.css": "/ImBourichaAhmedAmine.github.io/static/css/main.74198936.css",
-    "main.js": "/ImBourichaAhmedAmine.github.io/static/js/main.f666f566.js",
-    "static/media/VideoDetection.mp4": "/ImBourichaAhmedAmine.github.io/static/media/VideoDetection.45cbe334f84025e3b6e7.mp4",
-    "static/media/ProjetResto.jpg": "/ImBourichaAhmedAmine.github.io/static/media/ProjetResto.b3fcbd0fc7f5b53e7dc3.jpg",
-    "static/media/me5.png": "/ImBourichaAhmedAmine.github.io/static/media/me5.178074510bb6984748f0.png",
-    "static/media/me3-removebg-preview1.png": "/ImBourichaAhmedAmine.github.io/static/media/me3-removebg-preview1.e6e41ca9756f712fbda0.png",
-    "static/media/CV Bouricha Ahmed Amine.pdf": "/ImBourichaAhmedAmine.github.io/static/media/CV Bouricha Ahmed Amine.cec7b30439e9cd102f72.pdf",
-    "static/media/ProjetCovid.jpeg": "/ImBourichaAhmedAmine.github.io/static/media/ProjetCovid.eb7a7d6c112c6a98c771.jpeg",
+    "main.css": "/ImBourichaAhmedAmine.github.io/static/css/main.6662f236.css",
+    "main.js": "/ImBourichaAhmedAmine.github.io/static/js/main.b6fa1dcf.js",
+    "static/media/proPic.JPG": "/ImBourichaAhmedAmine.github.io/static/media/proPic.d57c700c1ed325b89418.JPG",
     "index.html": "/ImBourichaAhmedAmine.github.io/index.html",
-    "main.74198936.css.map": "/ImBourichaAhmedAmine.github.io/static/css/main.74198936.css.map",
-    "main.f666f566.js.map": "/ImBourichaAhmedAmine.github.io/static/js/main.f666f566.js.map"
+    "main.6662f236.css.map": "/ImBourichaAhmedAmine.github.io/static/css/main.6662f236.css.map",
+    "main.b6fa1dcf.js.map": "/ImBourichaAhmedAmine.github.io/static/js/main.b6fa1dcf.js.map"
   },
   "entrypoints": [
-    "static/css/main.74198936.css",
-    "static/js/main.f666f566.js"
+    "static/css/main.6662f236.css",
+    "static/js/main.b6fa1dcf.js"
   ]
 }
