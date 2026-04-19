@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import CTA from './CTA'
-import ME from '../../assets/proPic.JPG'
+import ME from '../../assets/proPic.webp'
 import HeaderSocials from './HeaderSocials'
 import './header.css'
 import { useTranslation } from 'react-i18next'
@@ -62,6 +62,13 @@ const TypingIntro = ({ onDone }) => {
   );
 };
 
+const getGreetingKey = () => {
+  const hour = new Date().getHours();
+  if (hour >= 5 && hour < 12) return 'header.greeting_morning';
+  if (hour >= 12 && hour < 18) return 'header.greeting_afternoon';
+  return 'header.greeting_evening';
+};
+
 const Header = () => {
     const { t } = useTranslation();
     const [showMainHeader, setShowMainHeader] = useState(false);
@@ -81,7 +88,7 @@ const Header = () => {
           <FloatingBlobs />
           <div className='me-glass-wrapper floating-profile' style={{ marginBottom: '1rem' }}>
             <div className='me-glass-border'>
-              <img src={ME} alt="me" className='me-img' />
+              <img src={ME} alt="Bouricha Ahmed Amine - Software Engineer" className='me-img' />
             </div>
           </div>
           {!showMainHeader ? (
@@ -90,8 +97,13 @@ const Header = () => {
             </div>
           ) : (
             <div className="header-glass-card magic-fade-in">
+              <div className="dynamic-greeting">{t(getGreetingKey())}</div>
               <h1 className="big-gradient-name animated-gradient">Bouricha Ahmed Amine</h1>
               <h5 className="text-light" style={{fontSize: '1.3rem', marginBottom: '1.5rem'}}>{t('header.role')}</h5>
+              <div className="availability-badge">
+                <span className="availability-dot"></span>
+                {t('header.availability')}
+              </div>
               <div className="welcome-fade-in">{t('welcome_portfolio')}</div>
               <CTA />
               <HeaderSocials/>

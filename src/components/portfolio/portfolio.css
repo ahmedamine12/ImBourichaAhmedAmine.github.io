@@ -497,13 +497,42 @@
 }
 @media screen and (max-width: 768px) {
   .timeline {
+    margin-left: 1.5rem;
+  }
+  .timeline-dot, .timeline-line {
+    left: -1.5rem;
+  }
+  .timeline-card {
+    margin-left: 1.5rem;
+    padding: 1.5rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline {
     margin-left: 1.2rem;
   }
   .timeline-dot, .timeline-line {
     left: -1.2rem;
   }
   .timeline-card {
-    margin-left: 1.2rem;
+    margin-left: 0.8rem;
+    padding: 1.2rem 1rem;
+    border-radius: 1.2rem;
+  }
+  .timeline-item {
+    margin-bottom: 2.5rem;
+  }
+  .timeline-card h3 {
+    font-size: 1.1rem;
+  }
+  .timeline-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  #portfolio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
   }
 }
 

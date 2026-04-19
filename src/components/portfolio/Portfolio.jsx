@@ -1,6 +1,6 @@
 import React from 'react'
 import './portfolio.css'
-import { FaGithub, FaLaptopCode, FaMobileAlt, FaRobot, FaDatabase, FaMapMarkedAlt, FaVirus, FaPalette, FaMousePointer } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaLaptopCode, FaMobileAlt, FaRobot, FaDatabase, FaMapMarkedAlt, FaVirus, FaPalette, FaMousePointer } from 'react-icons/fa'
 import { MdVerified } from 'react-icons/md'
 import { useTranslation } from 'react-i18next'
 
@@ -15,7 +15,7 @@ const iconMap = {
   FaMousePointer: <FaMousePointer />,
 };
 
-const Portofolio = () => {
+const Portfolio = () => {
   const { t } = useTranslation();
   const translatedProjects = t('projects.list', { returnObjects: true });
   const academicProjects = t('projects.academicList', { returnObjects: true }) || [];
@@ -28,7 +28,7 @@ const Portofolio = () => {
             <div className="timeline-item" key={idx}>
               <div className="timeline-dot" />
               <div className="timeline-line" />
-              <div className="project-card featured timeline-card" tabIndex={0}>
+              <div className="project-card featured timeline-card tilt-card" tabIndex={0}>
                 <div className="project-meta">
                   <span className="project-date">{project.date}</span>
                   <span className="project-role">{project.role}</span>
@@ -55,7 +55,7 @@ const Portofolio = () => {
       <div className="container projects-scroll-container">
         <div className="projects-grid">
           {academicProjects.map((project, idx) => (
-            <div className="project-card academic-card" key={idx} tabIndex={0}>
+            <div className="project-card academic-card tilt-card" key={idx} tabIndex={0}>
               <div className="project-meta">
                 {project.icon && (
                   <span className="project-icon">{iconMap[project.icon]}</span>
@@ -74,9 +74,10 @@ const Portofolio = () => {
                   <span key={i}><MdVerified /> {tech}</span>
                 ))}
               </div>
-              {project.github && (
+              {(project.github || project.demo) && (
                 <div className="project-links">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" title="GitHub"><FaGithub /></a>
+                  {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" title="GitHub"><FaGithub /></a>}
+                  {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer" title="Live Demo"><FaExternalLinkAlt /></a>}
                 </div>
               )}
               {project.funfact && (
@@ -90,4 +91,4 @@ const Portofolio = () => {
   )
 }
 
-export default Portofolio
+export default Portfolio

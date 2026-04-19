@@ -16,7 +16,7 @@ const Skills = () => {
             <h2>{t('skills.title')}</h2>
             <div className='container skills__container'>
                 <div className='skills__cards'>
-                    <article className='skills__card'>
+                    <article className='skills__card tilt-card'>
                         <div className='skills__icons-bg'><VscOutput className='skills__icons' /></div>
                         <h3>{t('skills.programming')}</h3>
                         <h4>
@@ -32,7 +32,7 @@ const Skills = () => {
                         </h4>
                     </article>
 
-                    <article className='skills__card'>
+                    <article className='skills__card tilt-card'>
                         <div className='skills__icons-bg'><BiCodeAlt className='skills__icons' /></div>
                         <h3>{t('skills.web')}</h3>
                         <h4>
@@ -49,7 +49,7 @@ const Skills = () => {
                         </h4>
                     </article>
 
-                    <article className='skills__card'>
+                    <article className='skills__card tilt-card'>
                         <div className='skills__icons-bg'><FaCloud className='skills__icons' /></div>
                         <h3>{t('skills.devops')}</h3>
                         <h4>
@@ -62,7 +62,7 @@ const Skills = () => {
                         </h4>
                     </article>
 
-                    <article className='skills__card'>
+                    <article className='skills__card tilt-card'>
                         <div className='skills__icons-bg'><FiDatabase className='skills__icons' /></div>
                         <h3>{t('skills.databases')}</h3>
                         <h4>
@@ -75,7 +75,7 @@ const Skills = () => {
                         </h4>
                     </article>
 
-                    <article className='skills__card'>
+                    <article className='skills__card tilt-card'>
                         <div className='skills__icons-bg'><SiDiagramsdotnet className='skills__icons' /></div>
                         <h3>{t('skills.design')}</h3>
                         <h4>
@@ -88,7 +88,7 @@ const Skills = () => {
                         </h4>
                     </article>
 
-                    <article className='skills__card'>
+                    <article className='skills__card tilt-card'>
                         <div className='skills__icons-bg'><BiUserCheck className='skills__icons' /></div>
                         <h3>{t('skills.managerial')}</h3>
                         <h4>

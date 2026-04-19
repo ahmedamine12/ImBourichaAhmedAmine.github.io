@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Header from './components/header/Header'
 import './i18n'
 import { useTranslation } from 'react-i18next'
 import Nav from './components/nav/Nav'
 import About from './components/about/About'
-import Portfolio from './components/portfolio/Portofolio'
+import Portfolio from './components/portfolio/Portfolio'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 import Skills from './components/skills/Skills'
 import { FaSun, FaMoon, FaGlobe } from 'react-icons/fa'
 import ThankYouModal from './components/ThankYouModal'
+import Chatbot from './components/chatbot/Chatbot'
+import useTilt from './hooks/useTilt'
 
 const languages = [
   { code: 'en', label: 'EN' },
@@ -19,36 +21,13 @@ const languages = [
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   return (
-    <div style={{
-      position: 'fixed',
-      top: '2rem',
-      left: '2rem',
-      zIndex: 1100,
-      display: 'flex',
-      gap: '0.5rem',
-      background: 'var(--color-glass)',
-      borderRadius: '2rem',
-      boxShadow: '0 4px 16px rgba(63, 167, 214, 0.10)',
-      padding: '0.3rem 0.7rem',
-      alignItems: 'center',
-      border: '2px solid var(--color-border)'
-    }}>
+    <div className="lang-switcher">
       {languages.map(lang => (
         <button
           key={lang.code}
           onClick={() => i18n.changeLanguage(lang.code)}
-          style={{
-            background: i18n.language === lang.code ? 'var(--color-primary)' : 'transparent',
-            color: i18n.language === lang.code ? 'var(--color-white)' : 'var(--color-primary)',
-            border: 'none',
-            borderRadius: '1.2rem',
-            padding: '0.3rem 1.1rem',
-            fontWeight: 600,
-            fontSize: '1rem',
-            cursor: 'pointer',
-            transition: 'background 0.3s, color 0.3s',
-            outline: 'none'
-          }}
+          className={i18n.language === lang.code ? 'active' : ''}
+          aria-label={`Switch language to ${lang.label}`}
         >
           {lang.label}
         </button>
@@ -59,19 +38,18 @@ const LanguageSwitcher = () => {
 
 const WindowThemeToggle = ({ theme, toggleTheme, onEasterEgg }) => {
   const [flipping, setFlipping] = useState(false);
-  const [clicks, setClicks] = useState([]);
+  const clicksRef = useRef([]);
   const handleClick = () => {
     setFlipping(true);
     const now = Date.now();
-    setClicks(prev => {
-      const filtered = prev.filter(ts => now - ts < 2000);
-      const updated = [...filtered, now];
-      if (updated.length >= 5) {
-        onEasterEgg && onEasterEgg();
-        return [];
-      }
-      return updated;
-    });
+    const filtered = clicksRef.current.filter(ts => now - ts < 2000);
+    const updated = [...filtered, now];
+    if (updated.length >= 5) {
+      onEasterEgg && onEasterEgg();
+      clicksRef.current = [];
+    } else {
+      clicksRef.current = updated;
+    }
     setTimeout(() => {
       toggleTheme();
       setFlipping(false);
@@ -141,29 +119,30 @@ const App = () => {
   }, [theme]);
 
   useEffect(() => {
-    const revealSections = () => {
-      document.querySelectorAll('.section-fade-in').forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          section.classList.add('visible');
-        }
-      });
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Reveal sections on scroll
+          document.querySelectorAll('.section-fade-in').forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+              section.classList.add('visible');
+            }
+          });
+          // Parallax blobs
+          document.querySelectorAll('.hero-blob').forEach((blob, i) => {
+            const speed = 0.12 + i * 0.07;
+            blob.style.transform = `translateY(${window.scrollY * speed}px)`;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', revealSections);
-    revealSections();
-    return () => window.removeEventListener('scroll', revealSections);
-  }, []);
-
-  useEffect(() => {
-    const handleParallax = () => {
-      document.querySelectorAll('.hero-blob').forEach((blob, i) => {
-      const scrollY = window.scrollY;
-        const speed = 0.12 + i * 0.07;
-        blob.style.transform = `translateY(${scrollY * speed}px)`;
-      });
-    };
-    window.addEventListener('scroll', handleParallax);
-    return () => window.removeEventListener('scroll', handleParallax);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const [showThankYou, setShowThankYou] = useState(false);
@@ -190,6 +169,10 @@ const App = () => {
     setTimeout(() => setShowEasterEgg(false), 2000);
   };
 
+  // Slight tilt for skills cards, ultra-minimal for experience/portfolio cards
+  useTilt('.skills__card', 4);
+  useTilt('.project-card', 2);
+
   return (  
     <>
       <div className="desktop-lang-switcher"><LanguageSwitcher /></div>
@@ -206,6 +189,7 @@ const App = () => {
       <Contact />
       <Footer />
       <ThankYouModal open={showThankYou} onClose={() => setShowThankYou(false)} />
+      <Chatbot />
     </>
   );
 };

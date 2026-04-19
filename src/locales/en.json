@@ -1,16 +1,22 @@
 {
   "header": {
     "hello": "Hello, I'm",
-    "role": "Software Engineer",
-    "scroll": "Scroll Down"
+    "role": "AI Software Engineer",
+    "scroll": "Scroll Down",
+    "greeting_morning": "Good morning ☀️",
+    "greeting_afternoon": "Good afternoon 🌤️",
+    "greeting_evening": "Good evening 🌙",
+    "availability": "Open to opportunities"
   },
   "about": {
     "title": "About Me",
-    "content": "Hi, I'm a software engineer, passionate about creating solutions that truly make a difference. I love projects that break the mold, ideas that challenge, and teams that dare to innovate. Naturally curious, I learn fast and enjoy turning every challenge into an opportunity to grow. For me, technology only matters if it brings people together and makes life simpler. If you're looking for someone who moves with energy, loves to think outside the box, and always keeps a smile, then we'll get along great.",
+    "content": "Hi, I'm a software engineer, passionate about creating solutions that truly make a difference. I leverage AI-powered tools like Cursor and GitHub Copilot to boost productivity and ship faster without compromising quality. I love projects that break the mold, ideas that challenge, and teams that dare to innovate. Naturally curious, I learn fast and enjoy turning every challenge into an opportunity to grow. For me, technology only matters if it brings people together and makes life simpler. If you're looking for someone who moves with energy, loves to think outside the box, and always keeps a smile, then we'll get along great.",
     "quote": "I truly believe that with passion and commitment, nothing is impossible in this field.",
     "funfacts": [
       "☕ Coffee lover",
-      "🚀 Loves new tech"
+      "🚀 Loves new tech",
+      "🤖 AI-augmented dev",
+      "🎙️ Tech Speaker"
     ]
   },
   "skills": {
@@ -30,7 +36,7 @@
   },
   "projects": {
     "experience": "Projects from Experience",
-    "academic": "Academic & Personal Projects",
+    "academic": "Personal Projects",
     "list": [
       {
         "date": "March 2024 - (current)",
@@ -47,7 +53,7 @@
         "tech": ["Spring Boot", "Flyway", "React", "PostgreSQL", "Redis", "Jenkins", "Azure"]
       },
       {
-        "date": "July 2023 - June 2023",
+        "date": "June 2023 - July 2023",
         "role": "Full Stack Engineer | Summer Internship at Xelops Technologies (ex Neoxia Maroc)",
         "title": "Automated Functional Testing Optimization",
         "description": "Design of automated functional tests with particular emphasis on optimizing their execution time, ensuring not only accuracy but also efficiency of testing procedures.",
@@ -69,6 +75,16 @@
       }
     ],
     "academicList": [
+      {
+        "date": "2025",
+        "role": "Chrome Extension",
+        "title": "EasyAI Chat - AI Chat Assistant",
+        "description": "Effortless AI chat assistant for any webpage. Access OpenAI GPT, Google Gemini, and more with a beautiful floating chat interface — directly in your browser without interrupting your workflow.",
+        "tech": ["JavaScript", "Chrome Extensions API", "OpenAI API", "Gemini API"],
+        "github": "https://github.com/ahmedamine12/Extention_EasyAI_Chat",
+        "demo": "https://chromewebstore.google.com/detail/easyai-chat/ghajibpgpnacjbeglihopdfdapalpgne",
+        "icon": "FaRobot"
+      },
       {
         "date": "January 2024 - February 2024",
         "role": "Web Application",
@@ -157,5 +173,26 @@
     "I'm Bouricha Ahmed Amine 🤓",
     "Software Engineer 💻",
     "Welcome to my portfolio!"
-  ]
+  ],
+  "chatbot": {
+    "title": "Ask me anything",
+    "greeting": "Hey there! 👋 I'm Amine's virtual assistant. Pick a question below to learn more about me!",
+    "fallback": "Hmm, I don't have an answer for that yet. Feel free to reach out directly via the contact section!",
+    "questions": [
+      { "key": "experience", "label": "💼 What's your experience?" },
+      { "key": "tech", "label": "🛠️ What tech do you use?" },
+      { "key": "availability", "label": "🟢 Are you available?" },
+      { "key": "funfact", "label": "🎉 Tell me a fun fact!" },
+      { "key": "ai_tools", "label": "🤖 How do you use AI?" },
+      { "key": "education", "label": "🎓 What's your education?" }
+    ],
+    "answers": {
+      "experience": "I'm a Software Engineer at Xelops Technologies (ex Neoxia Maroc) since March 2024, building full-stack web apps with React, Spring Boot, PostgreSQL, Docker & Azure. Before that I did multiple internships in full-stack development and test automation.",
+      "tech": "My main stack is React + Spring Boot + PostgreSQL. I also work with Docker, Kubernetes, Azure, Python, Flutter, and .NET. I'm always exploring new tools and frameworks!",
+      "availability": "I'm currently open to new opportunities! Feel free to reach out via email or LinkedIn — I'd love to chat about your project.",
+      "funfact": "I'm a huge coffee lover ☕, a tech speaker 🎙️, and I've built a Chrome extension (EasyAI Chat) that's live on the Chrome Web Store!",
+      "ai_tools": "I leverage AI-powered tools like Cursor, GitHub Copilot, and various LLM APIs to boost productivity. I even built EasyAI Chat — a browser extension that brings GPT and Gemini to any webpage!",
+      "education": "I hold an engineering degree in software engineering. I'm passionate about continuous learning and always leveling up my skills through personal projects and tech communities."
+    }
+  }
 } 

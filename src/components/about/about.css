@@ -30,7 +30,7 @@ place-items:center;
     border-radius: 2rem;
     overflow: hidden;
     transform: rotate(0deg);
-    transition: var(--transisation);
+    transition: var(--transition);
 }
 .about__me-image:hover{
     transform: rotate(20deg);
@@ -313,13 +313,49 @@ place-items:center;
   }
 }
 
+@media screen and (max-width: 600px) {
+  .about-glass-card {
+    padding: 1.2rem 0.8rem 1rem 0.8rem;
+    border-radius: 1.2rem;
+  }
+  .about-animated-underline {
+    font-size: 1.6rem;
+  }
+  .about__content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .about-funfact-pill {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.8rem;
+  }
+  .animated-quote {
+    font-size: 1.8rem;
+  }
+  .icone_quote2.animated-quote {
+    top: 0.6rem;
+    left: 0.8rem;
+  }
+  .icone_quote.animated-quote {
+    bottom: 0.6rem;
+    right: 0.8rem;
+  }
+  .about-quote {
+    font-size: 0.95rem;
+  }
+  .animated-signature {
+    font-size: 1.1rem;
+  }
+}
+
 #about {
   text-align: center;
 }
 
 .about-funfacts {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.7rem;
   justify-content: center;
   margin: 1.2rem 0 0.7rem 0;
 }

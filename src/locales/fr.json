@@ -1,16 +1,22 @@
 {
   "header": {
     "hello": "Bonjour, je suis",
-    "role": "Ingénieur Logiciel",
-    "scroll": "Faire défiler vers le bas"
+    "role": "Ingénieur Logiciel IA",
+    "scroll": "Faire défiler vers le bas",
+    "greeting_morning": "Bonjour ☀️",
+    "greeting_afternoon": "Bon après-midi 🌤️",
+    "greeting_evening": "Bonsoir 🌙",
+    "availability": "Ouvert aux opportunités"
   },
   "about": {
     "title": "À propos de moi",
-    "content": "Salut, je suis ingénieur logiciel, passionné par la création de solutions qui font vraiment la différence. J'adore les projets qui sortent de l'ordinaire, les idées qui bousculent, et les équipes qui osent innover. Curieux de nature, j'apprends vite et je prends plaisir à transformer chaque défi en opportunité de progresser. Pour moi, la technologie n'a de sens que si elle rapproche les gens et simplifie la vie. Si vous cherchez quelqu'un qui avance avec énergie, qui aime sortir du cadre et qui garde toujours le sourire, alors on est faits pour s'entendre.",
+    "content": "Salut, je suis ingénieur logiciel, passionné par la création de solutions qui font vraiment la différence. J'utilise des outils d'IA comme Cursor et GitHub Copilot pour booster ma productivité et livrer plus vite sans compromettre la qualité. J'adore les projets qui sortent de l'ordinaire, les idées qui bousculent, et les équipes qui osent innover. Curieux de nature, j'apprends vite et je prends plaisir à transformer chaque défi en opportunité de progresser. Pour moi, la technologie n'a de sens que si elle rapproche les gens et simplifie la vie. Si vous cherchez quelqu'un qui avance avec énergie, qui aime sortir du cadre et qui garde toujours le sourire, alors on est faits pour s'entendre.",
     "quote": "Je crois sincèrement qu'avec de la passion et de l'engagement, rien n'est impossible dans ce métier.",
     "funfacts": [
       "☕ Fan de café",
-      "🚀 Passionné de nouvelles technologies"
+      "🚀 Passionné de nouvelles technologies",
+      "🤖 Dev augmenté par l'IA",
+      "🎙️ Tech Speaker"
     ]
   },
   "skills": {
@@ -30,7 +36,7 @@
   },
   "projects": {
     "experience": "Projets d'expérience professionnelle",
-    "academic": "Projets académiques et personnels",
+    "academic": "Projets personnels",
     "list": [
       {
         "title": "Projet client - Xelops Technologies (ex Neoxia Maroc)",
@@ -49,7 +55,7 @@
       {
         "title": "Optimisation des tests fonctionnels automatisés",
         "role": "Ingénieur Logiciel Full Stack | Stage d'été chez Xelops Technologies (ex Neoxia Maroc)",
-        "date": "Juillet 2023 - Juin 2023",
+        "date": "Juin 2023 - Juillet 2023",
         "description": "Conception de tests fonctionnels automatisés avec un accent particulier sur l'optimisation de leur temps d'exécution, garantissant non seulement la précision mais aussi l'efficacité des procédures de test.",
         "tech": ["Java", "Cucumber", "QAF", "Selenium", "TestNG"]
       },
@@ -69,6 +75,16 @@
       }
     ],
     "academicList": [
+      {
+        "date": "2025",
+        "role": "Extension Chrome",
+        "title": "EasyAI Chat - Assistant IA",
+        "description": "Assistant IA intégré à n'importe quelle page web. Accédez à OpenAI GPT, Google Gemini et plus encore via une interface de chat flottante élégante, directement dans votre navigateur sans interrompre votre workflow.",
+        "tech": ["JavaScript", "Chrome Extensions API", "OpenAI API", "Gemini API"],
+        "github": "https://github.com/ahmedamine12/Extention_EasyAI_Chat",
+        "demo": "https://chromewebstore.google.com/detail/easyai-chat/ghajibpgpnacjbeglihopdfdapalpgne",
+        "icon": "FaRobot"
+      },
       {
         "date": "Janvier 2024 - Février 2024",
         "role": "Application Web",
@@ -157,5 +173,26 @@
     "Je suis Bouricha Ahmed Amine 🤓",
     "Ingénieur Logiciel 💻",
     "Bienvenue sur mon portfolio !"
-  ]
+  ],
+  "chatbot": {
+    "title": "Posez-moi une question",
+    "greeting": "Salut ! 👋 Je suis l'assistant virtuel d'Amine. Choisissez une question ci-dessous pour en savoir plus !",
+    "fallback": "Hmm, je n'ai pas encore de réponse pour ça. N'hésitez pas à me contacter directement via la section contact !",
+    "questions": [
+      { "key": "experience", "label": "💼 Quelle est ton expérience ?" },
+      { "key": "tech", "label": "🛠️ Quelles technos utilises-tu ?" },
+      { "key": "availability", "label": "🟢 Es-tu disponible ?" },
+      { "key": "funfact", "label": "🎉 Un fait amusant ?" },
+      { "key": "ai_tools", "label": "🤖 Comment utilises-tu l'IA ?" },
+      { "key": "education", "label": "🎓 Quelle est ta formation ?" }
+    ],
+    "answers": {
+      "experience": "Je suis Ingénieur Logiciel chez Xelops Technologies (ex Neoxia Maroc) depuis mars 2024, développant des applications web full-stack avec React, Spring Boot, PostgreSQL, Docker et Azure. Avant cela, j'ai effectué plusieurs stages en développement full-stack et automatisation de tests.",
+      "tech": "Mon stack principal est React + Spring Boot + PostgreSQL. Je travaille aussi avec Docker, Kubernetes, Azure, Python, Flutter et .NET. Je suis toujours à la recherche de nouveaux outils et frameworks !",
+      "availability": "Je suis actuellement ouvert aux nouvelles opportunités ! N'hésitez pas à me contacter par email ou LinkedIn — je serais ravi de discuter de votre projet.",
+      "funfact": "Je suis un grand fan de café ☕, conférencier tech 🎙️, et j'ai créé une extension Chrome (EasyAI Chat) disponible sur le Chrome Web Store !",
+      "ai_tools": "J'utilise des outils d'IA comme Cursor, GitHub Copilot et diverses API LLM pour booster ma productivité. J'ai même créé EasyAI Chat — une extension navigateur qui intègre GPT et Gemini dans n'importe quelle page web !",
+      "education": "Je suis diplômé ingénieur en génie logiciel. Je suis passionné par l'apprentissage continu et je ne cesse de développer mes compétences à travers des projets personnels et des communautés tech."
+    }
+  }
 } 

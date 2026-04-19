@@ -1,14 +1,15 @@
 .container.contact__container
 {
-    width: 58%;
-    display: grid;
-    grid-template-columns: 30% 58%;
-    gap:12%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
 }
 .contact__options{
     display: flex;
-    flex-direction: column;
-    gap:1.2rem
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .contact__option
 {
@@ -25,6 +26,8 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    flex: 1 1 220px;
+    max-width: 280px;
 }
 .contact__option::before {
     content: '';
@@ -177,13 +180,30 @@ input:focus, textarea:focus {
 /*********** MEDIA QUERIES (Small DEVICES)************/
 @media screen and ( max-width:600px ) {
     .container.contact__container{
-        width: var(--container-width-sm);
+        width: 95%;
+    }
+    .contact__options {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    .contact__option {
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+        padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    }
+    .contact__option a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 1.2rem;
     }
     .container.contact__container form{
-        width: 80%;
-        gap: 2rem;
-        }
-    
+        width: 100%;
+        gap: 1.2rem;
+    }
 }
 
 .contact-spinner {
@@ -200,4 +220,15 @@ input:focus, textarea:focus {
 @keyframes contactSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Confetti canvas */
+.confetti-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
 }

@@ -11,9 +11,9 @@ const Footer = () => {
     <footer className='footer-glass-card'>
       <div className='footer-content'>
         <div className='footer-socials'>
-          <a href="https://www.facebook.com/amine.bouricha.73/" target="__blank"> <FaFacebookF /></a>
-          <a href="https://instagram.com" target="__blank"><GrInstagram /></a>
-          <a href="https://twitter.com/BourichaA1" target="__blank"><BsTwitter /></a>
+          <a href="https://www.facebook.com/amine.bouricha.73/" target="_blank" rel="noopener noreferrer"> <FaFacebookF /></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><GrInstagram /></a>
+          <a href="https://twitter.com/BourichaA1" target="_blank" rel="noopener noreferrer"><BsTwitter /></a>
         </div>
         <div className='footer-copy'>
           <small>&copy; Bouricha Ahmed Amine. {t('footer.copyright')}</small>
